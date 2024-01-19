@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link, Outlet ,NavLink} from 'react-router-dom'
 import pictlogo from '../../pictlogo.jfif'
+import pict_campus from '../../images/pict_campus_image.jpg'
 export default function Internship() {
   return (
     <div>
+      
     <div>
-<nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary ">
+<nav className=" navbar navbar-expand-lg navbar-light bg-body-tertiary ">
 
-<div className="container-fluid bg-info rounded-9 ">
+<div className="fixed-top container-fluid bg-info rounded-9 ">
 
   <button
     data-mdb-collapse-init
@@ -127,14 +129,56 @@ export default function Internship() {
 </div>
 </nav>
 </div>  
+<div className='container mt-5'>
 
 
+<div className="d-flex">
 
+  <div className="px-4">
+  <div className='container-fluid'>
+<img
+  src={pict_campus}
+  height={500}
+  width={500}
+  className='mt-5 image-fluid custom-image'
+/>
+
+</div>
+  </div>
+
+  <div className="vr" style={{height: '250px'}}></div>
+  <div className="px-4">
+    <h1 className='mt-5'>PICT TNP CELL</h1>
+    <p>
+    The Training and Placement (T&P) Cell plays an integral role in journey of the students, aspiring for excellent job opportunities. The T&P Cell at PICT serves as an aerodrome for the flights of the young undergrads and post grads to be taken-off to greater horizons and heights beyond imagination. T&P Cell, headed by Dr. S. S. Narkhede is recognized for the exemplary placements offered to its of CE, E&TC Engg. and IT Students and thus stands sturdy to the expectations of its Stakeholders. Regardless of the department, every batch raises the bar for the upcoming batches and remarkably takes the baton ahead. All the students meeting the criteria prescribed by the Institute and the companies are permitted to register for the Placement Process. The registration for the placement commences at the end of the sixth semester of engineering.
+
+The Institute is delighted to host the numerous companies belonging to “DREAM JOBS” category. Our creamy students earn spots in the top brackets of such companies offering the pay package above 20 LPA.
+
+Good number of students get internship opportunities and pre-placement offers. Many companies from ‘Fortune 500’ also visit the campus applauding our students. The T&P Cell at PICT is successful in maintaining high placement statistics over the years and perpetually strives to reach greater heights.
+    </p>
+    
+  </div>
+
+</div>
+<div className='container ml-5'>
+<h1>PLACEMENT PROCESS</h1>
+    <p>
+<p>1. The Placement process commences with “Placement Orientation Session”. It details the objectives of the T&P cell, Institutional polices, Placement Statistics and criteria. An awareness about the placement procedure and general discipline, domain wise sources and preparation tactics is created among the students.</p>
+<p>2. The registration of the students to enrol for the on-campus placement commences at the end of the sixth semester of engineering. Students submit the related documents for verification.</p>
+<p>3. The T&P Cell invites the companies for placement by sharing the placements reports and other required information.</p>
+<p>4. Upon reciept of the profile / job description , eligibility criteria and CTC from the companies, company-registion form is floated among the the studnets for confirming their registarion.</p>
+<p>5. Pre-Placement connect is subsequently arrranged for the registered students as per mutual convenience of the institution and the company.</p>
+<p>6. The recruitment process is arranged and executed in coordination with T&P cell</p>
+<p>7. T&P cell recieves the list of the selected students from the company and formally communicates an acceptance on behalf of students.</p>
+    </p>
+
+    </div>
+</div>
 
 
 
 <div>
-<footer className="fixed-bottom text-center text-lg-start bg-body-tertiary text-muted">
+<footer className="text-center text-lg-start bg-body-tertiary text-muted mt-5">
  
   <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     
