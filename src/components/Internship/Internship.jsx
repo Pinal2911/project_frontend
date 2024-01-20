@@ -51,6 +51,9 @@ export default function Internship() {
         <a className="nav-link text-white" href="/internship/company">Company Login</a>
       </li>
       <li className="nav-item">
+        <a className="nav-link text-white" href="/internship/recruit">Recruitment Process</a>
+      </li>
+      <li className="nav-item">
         <a className="nav-link text-white" href="/help">Help</a>
       </li>
     </ul>
@@ -140,7 +143,7 @@ export default function Internship() {
   src={pict_campus}
   height={500}
   width={500}
-  className='mt-5 image-fluid custom-image'
+  className='mt-5 image-fluid custom-image rounded-9'
 />
 
 </div>

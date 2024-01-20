@@ -15,7 +15,7 @@ import StudentPage from './components/StudentPage/StudentPage.jsx'
 import AdminPage from './components/AdminPage/AdminPage.jsx'
 import TargetScreen from './components/TargetWindow/TargetWindow.jsx'
 import CompanyPage from './components/CompanyPage/CompanyPage.jsx'
-
+import Recruit from './components/Recruit/Recruit.jsx'
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -29,18 +29,18 @@ const router= createBrowserRouter(
         <Route path='/internship/admin' element={<Admin user='Admin'/>}/>
         <Route path='/internship/company' element={<Company/>}/>
         <Route path='/internship/register' element={<Register/>}/>
-
-        {/* <Route path='/internship/:propParameter/:varName' element={<TargetScreen/>}/> */}
+       <Route path='/internship/recruit' element={<Recruit/>}/>
+  
         <Route path='/internship/Admin/AdminPage' element={<AdminPage/>}/>
         <Route path='/internship/Student/StudentPage' element={<StudentPage/>}/>
         <Route path='/internship/Company/CompanyPage' element={<CompanyPage/>}/>
-        {/* <Route path='/internship/:propParameter/:varName' element={<AdminPage/>}/>
-        <Route path='/internship/:propParameter/:varName' element={<CompanyPage/>}/> */}
+      
 
         <Route path='/placement/student' element={<Student/>}/>
         <Route path='/placement/admin' element={<Admin user='Admin'/>}/>
         <Route path='/placement/company' element={<Company/>}/>
         <Route path='/placement/register' element={<Register/>}/>
+        <Route path='/placement/recruit' element={<Recruit/>}/>
     </Route>
   )
 )

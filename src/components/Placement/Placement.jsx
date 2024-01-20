@@ -41,13 +41,16 @@ function Placement() {
         <a className="nav-link text-white" href="/">PICT PLACEMENT CELL</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/internship/student">Student Login</a>
+        <a className="nav-link text-white" href="/placement/student">Student Login</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/internship/admin">Admin Login</a>
+        <a className="nav-link text-white" href="/placement/admin">Admin Login</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/internship/company">Company Login</a>
+        <a className="nav-link text-white" href="/placement/company">Company Login</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link text-white" href="/placement/recruit">Recruitment Process</a>
       </li>
       <li className="nav-item">
         <a className="nav-link text-white" href="/help">Help</a>
@@ -140,7 +143,7 @@ function Placement() {
   src={pict_campus}
   height={500}
   width={500}
-  className='mt-5 image-fluid custom-image'
+  className='mt-5 image-fluid custom-image rounded-9'
 />
 
 </div>
