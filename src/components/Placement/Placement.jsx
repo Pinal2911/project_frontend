@@ -52,6 +52,10 @@ function Placement() {
       <li className="nav-item">
         <a className="nav-link text-white" href="/placement/recruit">Recruitment Process</a>
       </li>
+
+      <li className="nav-item">
+        <a className="nav-link text-white" href="/placement/register">Register</a>
+      </li>
       <li className="nav-item">
         <a className="nav-link text-white" href="/help">Help</a>
       </li>

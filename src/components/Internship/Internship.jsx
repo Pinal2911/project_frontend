@@ -54,6 +54,9 @@ export default function Internship() {
         <a className="nav-link text-white" href="/internship/recruit">Recruitment Process</a>
       </li>
       <li className="nav-item">
+        <a className="nav-link text-white" href="/internship/register">Register</a>
+      </li>
+      <li className="nav-item">
         <a className="nav-link text-white" href="/help">Help</a>
       </li>
     </ul>
@@ -99,7 +102,7 @@ export default function Internship() {
       <a
         data-mdb-dropdown-init
         className="dropdown-toggle d-flex align-items-center hidden-arrow"
-        href="/"
+        href=""
         id="navbarDropdownMenuAvatar"
         role="button"
         aria-expanded="false"
