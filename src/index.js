@@ -40,6 +40,7 @@ const router= createBrowserRouter(
         <Route path='/internship/Admin/AdminPage' element={<AdminPage/>}/>
         <Route path='/internship/Student/StudentPage' element={<StudentPage/>}/>
         <Route path='/internship/Company/CompanyPage' element={<CompanyPage/>}/>
+        
         <Route path='/internship/register/IAdminRegister' element={<IAdminRegister/>}/>
         <Route path='/internship/register/ICompanyRegister' element={<ICompanyRegister/>}/>
         <Route path='/internship/register/IStudentRegister' element={<IStudentRegister/>}/>
