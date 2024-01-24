@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Sidebar from './Sidebar'
+import Topnav from './Topnav'
 function CompanyPage() {
   return (
-    <div>companypage</div>
+    <>
+    <Sidebar/>
+    <Topnav/>
+    </>
   )
 }
 

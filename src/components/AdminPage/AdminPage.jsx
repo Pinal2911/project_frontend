@@ -1,8 +1,13 @@
 import React from 'react'
 
+import Sidebar from './Sidebar'
+import Topnav from './Topnav'
 function AdminPage() {
   return (
-    <div>admin</div>
+    <>
+    <Sidebar/>
+    <Topnav/>
+    </>
   )
 }
 

@@ -24,6 +24,7 @@ import StudentRegister from './components/Register/StudentRegister.jsx'
 import IAdminRegister from './components/Register/IAdminRegister.jsx'
 import ICompanyRegister from './components/Register/ICompanyRegister.jsx'
 import IStudentRegister from './components/Register/IStudentRegister.jsx'
+import IStudentPage from './components/IStudentPage.jsx/IStudentPage.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -52,9 +53,14 @@ const router= createBrowserRouter(
         <Route path='/placement/company' element={<Company/>}/>
         <Route path='/placement/register' element={<Register/>}/>
         <Route path='/placement/recruit' element={<Recruit/>}/>
+
+
         <Route path='/placement/register/AdminRegister' element={<AdminRegister/>}/>
         <Route path='/placement/register/CompanyRegister' element={<CompanyRegister/>}/>
         <Route path='/placement/register/StudentRegister' element={<StudentRegister/>}/>
+
+
+        <Route path='/placement/Student/IStudentPage' element={<IStudentPage/>}/>
     </Route>
   )
 )

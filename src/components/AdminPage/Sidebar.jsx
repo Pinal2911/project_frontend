@@ -46,12 +46,7 @@ export default function App() {
               </MDBListGroupItem>
             </MDBRipple>
 
-            <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
-                <MDBIcon fas icon="info me-3" />
-                Round Details
-              </MDBListGroupItem>
-            </MDBRipple>
+          
 
             <MDBRipple rippleTag='span'>
               <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
@@ -67,6 +62,7 @@ export default function App() {
               </MDBListGroupItem>
             </MDBRipple>
 
+         
 
             <MDBRipple rippleTag='span'>
               <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
