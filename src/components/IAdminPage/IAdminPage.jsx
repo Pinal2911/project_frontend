@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Topnav from  './Topnav'
-function IStudentPage() {
+import Topnav from './Topnav'
+function IAdminPage() {
   return (
     <>
     <Sidebar/>
@@ -10,4 +10,4 @@ function IStudentPage() {
   )
 }
 
-export default IStudentPage
+export default IAdminPage

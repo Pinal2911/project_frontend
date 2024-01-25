@@ -25,6 +25,8 @@ import IAdminRegister from './components/Register/IAdminRegister.jsx'
 import ICompanyRegister from './components/Register/ICompanyRegister.jsx'
 import IStudentRegister from './components/Register/IStudentRegister.jsx'
 import IStudentPage from './components/IStudentPage.jsx/IStudentPage.jsx';
+import IAdminPage from './components/IAdminPage/IAdminPage.jsx';
+import ICompanyPage from './components/ICompanyPage/ICompanyPage.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -61,6 +63,8 @@ const router= createBrowserRouter(
 
 
         <Route path='/placement/Student/IStudentPage' element={<IStudentPage/>}/>
+        <Route path='/placement/Admin/IAdminPage' element={<IAdminPage/>}/>
+        <Route path='/placement/Company/ICompanyPage' element={<ICompanyPage/>}/>
     </Route>
   )
 )

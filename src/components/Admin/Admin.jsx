@@ -9,7 +9,14 @@ import AdminPage from '../AdminPage/AdminPage'
 import StudentPage from '../StudentPage/StudentPage'
 
 function Admin(props) {
+    const currentURL=window.location.href
+    console.log(currentURL)
     var pagename="";
+    var role="";
+    if(currentURL == 'http://localhost:3000/internship/admin' ||
+    currentURL == 'http://localhost:3000/internship/student' ||
+    currentURL == 'http://localhost:3000/internship/company'){
+      role='internship'
     if(props.user == 'Admin'){
         pagename='AdminPage'
     }else if(props.user == 'Company'){
@@ -17,13 +24,25 @@ function Admin(props) {
     }else if(props.user == 'Student'){
         pagename='StudentPage'
     }
+  }else if(currentURL ==  'http://localhost:3000/placement/admin' || 
+  currentURL == 'http://localhost:3000/placement/student'||
+  currentURL == 'http://localhost:3000/placement/company'){
+    role='placement'
+    if(props.user == 'Admin'){
+      pagename='IAdminPage'
+  }else if(props.user == 'Company'){
+      pagename='ICompanyPage'
+  }else if(props.user == 'Student'){
+      pagename='IStudentPage'
+  }
+  }
     const navigate=useNavigate();
     const navigateTo = ()=>{
         //note change the status of flag after connection with database
         //check whether given username and password are same as that in database
         const flag=true
         if(flag == true){
-        navigate(`/internship/${props.user}/${pagename}`);
+        navigate(`/${role}/${props.user}/${pagename}`);
         console.log({pagename});
         }
         else
