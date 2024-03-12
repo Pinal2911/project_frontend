@@ -1,6 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function CompanyRegister() {
+
+
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+   
+      try{
+        const response=await fetch('http://localhost:8080/api/placement/auth/company/register',{
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json'
+            
+          },
+          body:JSON.stringify({name,email,password})
+        });
+        if(response.ok){
+          alert("company registered")
+        }else{
+          alert("registation failed")
+        }
+        
+      }catch(error){
+        console.error('error during login :',error);
+      }
+    }
+  
+
+
+
+
+
+
   return (
     <div>
     <section className="vh-100" style={{backgroundColor: '#508bfc'}}>
@@ -13,12 +48,18 @@ function CompanyRegister() {
         <h1 className="display-5 mb-5">COMPANY REGISTRATION</h1>
 
         <div className="form-outline mb-4">
-          <input type="email" id="typeEmailX-2" className="form-control form-control-lg" />
+          <input type="text" id="name" value={name} onChange={(e)=>setName(e.target.value)}className="form-control form-control-lg" />
+          <label className="form-label" for="name" >Name</label>
+        </div>
+
+
+        <div className="form-outline mb-4">
+          <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} id="typeEmailX-2" className="form-control form-control-lg" />
           <label className="form-label" for="typeEmailX-2">Email</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="password" id="typePasswordX-2" className="form-control form-control-lg" />
+          <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} id="typePasswordX-2" className="form-control form-control-lg" />
           <label className="form-label" for="typePasswordX-2">Password</label>
         </div>
 
@@ -28,7 +69,7 @@ function CompanyRegister() {
           <label className="form-check-label" for="form1Example3"> Remember password </label>
         </div>
 
-        <button className="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+        <button onClick={handleSubmit} className="btn btn-primary btn-lg btn-block" type="submit">Register</button>
         
        
       </div>

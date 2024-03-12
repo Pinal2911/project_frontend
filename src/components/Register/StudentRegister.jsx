@@ -5,6 +5,54 @@ import "react-datepicker/dist/react-datepicker.css";
 function StudentRegister() {
   
   const [sDate,setDate]=useState(new Date());
+  const [fname,setFname]=useState('');
+  const [lname,setLname]=useState('');
+  const [mname,setMname]=useState('');
+  const [password,setPassword]=useState('');
+  const [email,setEmail]=useState('');
+  const [alterEmail,setAlterEmail]=useState('');
+
+  const[number,setNumber]=useState();
+  const[anumber,setANumber]=useState();
+  const[gender,setGender]=useState('');
+  const[address,setAddress]=useState('');
+  const[permAddr,setPermAddr]=useState('');
+  const[branch,setBranch]=useState('');
+  const[division,setDivision]=useState('');
+  const[rollno,setRollNo]=useState();
+  const[prnNumber,setPrnNumber]=useState('');
+  const[pictNumber,setPictNumber]=useState('');
+  const[sscPer,setSscPer]=useState();
+  const[board,setBoard]=useState('');
+  const[sscYear,setSscYear]=useState();
+  const[sscGap,setSscGap]=useState();
+  const[hscPer,setHscPer]=useState();
+  const[hscGap,setHscGap]=useState();
+  const[diplomaPer,setDiplomaPer]=useState();
+  const[diplomaGap,setDiplomaGap]=useState();
+  const[mhCetPer,setMhCetPer]=useState();
+  const[jeeMains,setJeeMains]=useState();
+  const[startYear,setStartYear]=useState();
+  const[fe1SGPA,setfe1SGPA]=useState();
+  const[fe2SGPA,setfe2SGPA]=useState();
+  const[te1SGPA,sette1SGPA]=useState();
+  const[te2SGPA,sette2SGPA]=useState();
+  const[se1SGPA,setse1SGPA]=useState();
+  const[se2SGPA,setse2SGPA]=useState();
+  const[backlogs,setBacklogs]=useState();
+  const[yd,setYd]=useState();
+  const[adhar,setAdhar]=useState();
+  const[pan,setPan]=useState('');
+  const[passport,setPassport]=useState();
+  const[Citizenship,setCitizenship]=useState();
+  const[higherEducation,setHigherEd]=useState();
+  const[amcat,setAmcat]=useState();
+
+
+
+
+
+
 
   return (
     
