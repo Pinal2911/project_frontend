@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Admin.css'
 import Internship from '../Internship/Internship'
 //import StudFeatures from '../StudFeatures/StudFeatures'
@@ -7,8 +7,42 @@ import pictlogo from '../../pictlogo.jfif'
 import { useNavigate } from 'react-router-dom'
 import AdminPage from '../AdminPage/AdminPage'
 import StudentPage from '../StudentPage/StudentPage'
+import userEvent from '@testing-library/user-event'
 
 function Admin(props) {
+
+    const [usernameOrEmail,setUserName]=useState('');
+    const [password,setPassword]=useState('');
+    
+    const navigate=useNavigate();
+    const handleSubmit=async(e)=>{
+      e.preventDefault();
+      try{
+        const response=await fetch('http://localhost:8080/api/placement/auth/user/login',{
+
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify({usernameOrEmail,password})
+
+        }
+        );
+        if(response.ok){
+          navigate(`/${role}/${props.user}/${pagename}`)
+          
+          console.log('login successfull');
+        }else{
+        
+          console.error('login failed');
+        }
+      }catch(error){
+        console.error('Error during login: ',error);
+      }
+     
+    };
+
+
     const currentURL=window.location.href
     console.log(currentURL)
     var pagename="";
@@ -36,21 +70,11 @@ function Admin(props) {
       pagename='IStudentPage'
   }
   }
-    const navigate=useNavigate();
-    const navigateTo = ()=>{
-        //note change the status of flag after connection with database
-        //check whether given username and password are same as that in database
-        const flag=true
-        if(flag == true){
-        navigate(`/${role}/${props.user}/${pagename}`);
-        console.log({pagename});
-        }
-        else
-        alert("please enter valid details")
-    }
+   
+   
   return (
    
-    <div>
+    <div >
         <section className="vh-100" style={{backgroundColor: '#508bfc'}}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -61,12 +85,12 @@ function Admin(props) {
             <h1 className="display-5 mb-5">{props.user}</h1>
 
             <div className="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" className="form-control form-control-lg" />
-              <label className="form-label" for="typeEmailX-2">Email</label>
+              <input type="text" id="text_1" value={usernameOrEmail} onChange={(e)=>setUserName(e.target.value)}className="form-control form-control-lg" />
+              <label className="form-label" for="text_1">Username</label>
             </div>
 
             <div className="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" className="form-control form-control-lg" />
+              <input type="password"value={password} onChange={(e)=>setPassword(e.target.value)}  id="typePasswordX-2" className="form-control form-control-lg" />
               <label className="form-label" for="typePasswordX-2">Password</label>
             </div>
 
@@ -76,7 +100,7 @@ function Admin(props) {
               <label className="form-check-label" for="form1Example3"> Remember password </label>
             </div>
 
-            <button onClick={navigateTo} className="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button  onClick={handleSubmit} className="btn btn-primary btn-lg btn-block" type="submit">Login</button>
             
             <div className='text-center mt-5'>
                 <p>Not a member? <a href='#!'>Register</a></p>
