@@ -26,14 +26,6 @@ function AdminRegister() {
     }
   }
 
-
-
-
-
-
-
-
-
   return (
     
     
