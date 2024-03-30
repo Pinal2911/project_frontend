@@ -5,9 +5,7 @@ import Internship from '../Internship/Internship'
 import { Link } from 'react-router-dom'
 import pictlogo from '../../pictlogo.jfif'
 import { useNavigate } from 'react-router-dom'
-import AdminPage from '../AdminPage/AdminPage'
-import StudentPage from '../StudentPage/StudentPage'
-import userEvent from '@testing-library/user-event'
+
 
 function Admin(props) {
 
@@ -52,22 +50,22 @@ function Admin(props) {
     currentURL == 'http://localhost:3000/internship/company'){
       role='internship'
     if(props.user == 'Admin'){
-        pagename='AdminPage'
+        pagename='IAdminPage'
     }else if(props.user == 'Company'){
-        pagename='CompanyPage'
+        pagename='ICompanyPage'
     }else if(props.user == 'Student'){
-        pagename='StudentPage'
+        pagename='IStudentPage'
     }
   }else if(currentURL ==  'http://localhost:3000/placement/admin' || 
   currentURL == 'http://localhost:3000/placement/student'||
   currentURL == 'http://localhost:3000/placement/company'){
     role='placement'
     if(props.user == 'Admin'){
-      pagename='IAdminPage'
+      pagename='AdminPage'
   }else if(props.user == 'Company'){
-      pagename='ICompanyPage'
+      pagename='CompanyPage'
   }else if(props.user == 'Student'){
-      pagename='IStudentPage'
+      pagename='StudentPage'
   }
   }
    

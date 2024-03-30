@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router
 import Topnav from './Topnav';
 import Sidebar from './Sidebar';
+
 import {
 
   MDBContainer,
@@ -11,9 +12,7 @@ import {
 export default function StudentPage () {
   return (
     <>
-   
-     <Sidebar/>
-     
+     <Sidebar/>   
      <Topnav/>
     </>
   );

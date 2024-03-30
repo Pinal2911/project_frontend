@@ -27,6 +27,7 @@ import IStudentRegister from './components/Register/IStudentRegister.jsx'
 import IStudentPage from './components/IStudentPage.jsx/IStudentPage.jsx';
 import IAdminPage from './components/IAdminPage/IAdminPage.jsx';
 import ICompanyPage from './components/ICompanyPage/ICompanyPage.jsx';
+import CurrentCompany from './components/StudentPage/CurrentCompany.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -42,9 +43,9 @@ const router= createBrowserRouter(
         <Route path='/internship/register' element={<Register/>}/>
        <Route path='/internship/recruit' element={<Recruit/>}/>
   
-        <Route path='/internship/Admin/AdminPage' element={<AdminPage/>}/>
-        <Route path='/internship/Student/StudentPage' element={<StudentPage/>}/>
-        <Route path='/internship/Company/CompanyPage' element={<CompanyPage/>}/>
+        <Route path='/internship/Admin/IAdminPage' element={<IAdminPage/>}/>
+        <Route path='/internship/Student/IStudentPage' element={<IStudentPage/>}/>
+        <Route path='/internship/Company/ICompanyPage' element={<ICompanyPage/>}/>
         
         <Route path='/internship/register/IAdminRegister' element={<IAdminRegister/>}/>
         <Route path='/internship/register/ICompanyRegister' element={<ICompanyRegister/>}/>
@@ -62,9 +63,10 @@ const router= createBrowserRouter(
         <Route path='/placement/register/StudentRegister' element={<StudentRegister/>}/>
 
 
-        <Route path='/placement/Student/IStudentPage' element={<IStudentPage/>}/>
-        <Route path='/placement/Admin/IAdminPage' element={<IAdminPage/>}/>
-        <Route path='/placement/Company/ICompanyPage' element={<ICompanyPage/>}/>
+        <Route path='/placement/Student/StudentPage' element={<StudentPage/>}/>
+        <Route path='/placement/Admin/AdminPage' element={<AdminPage/>}/>
+        <Route path='/placement/Company/CompanyPage' element={<CompanyPage/>}/>
+        <Route path='/placement/Student/StudentPage/CurrentCompany' element={<CurrentCompany/>}></Route>
     </Route>
   )
 )

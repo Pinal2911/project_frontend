@@ -7,8 +7,18 @@ import {
   MDBListGroup,
   MDBListGroupItem
 } from 'mdb-react-ui-kit';
+import { Link, useNavigate } from 'react-router-dom';
+import CurrentCompany from './CurrentCompany';
+
+
+
 
 export default function App() {
+  const navigate=useNavigate();
+function currentCompany(){
+  navigate(`/placement/Student/StudentPage/CurrentCompany`)
+}
+
   const [showShow, setShowShow] = useState(false);
 
   const toggleShow = () => setShowShow(!showShow);
@@ -19,7 +29,7 @@ export default function App() {
         <div className="d-flex mt-10">
           <MDBListGroup flush className="bg-info">
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded rounded bg-info text-white' >
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/CurrentCompany`} action className='border-0 border-bottom rounded rounded bg-info text-white' >
                 <MDBIcon fas icon="align-justify me-3" />
               Current Companies
               </MDBListGroupItem>
