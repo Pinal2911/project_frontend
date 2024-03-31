@@ -57,7 +57,7 @@ function currentCompany(){
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/getRoundDetails`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="info me-3" />
                 Round Details
               </MDBListGroupItem>
