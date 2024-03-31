@@ -28,6 +28,9 @@ import IStudentPage from './components/IStudentPage.jsx/IStudentPage.jsx';
 import IAdminPage from './components/IAdminPage/IAdminPage.jsx';
 import ICompanyPage from './components/ICompanyPage/ICompanyPage.jsx';
 import CurrentCompany from './components/StudentPage/CurrentCompany.jsx';
+import UpcomingCompany from './components/StudentPage/UpcomingCompany.jsx';
+import PlacedStudent from './components/StudentPage/PlacedStudent.jsx';
+import UnplacedStudents from './components/StudentPage/UnplacedStudents.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -67,6 +70,9 @@ const router= createBrowserRouter(
         <Route path='/placement/Admin/AdminPage' element={<AdminPage/>}/>
         <Route path='/placement/Company/CompanyPage' element={<CompanyPage/>}/>
         <Route path='/placement/Student/StudentPage/CurrentCompany' element={<CurrentCompany/>}></Route>
+        <Route path='/placement/Student/StudentPage/UpcomingCompany' element={<UpcomingCompany/>}></Route>
+        <Route path='/placement/Student/StudentPage/getPlacedStudents' element={<PlacedStudent/>}></Route>
+        <Route path='/placement/Student/StudentPage/getUnplacedStudents' element={<UnplacedStudents/>}></Route>
     </Route>
   )
 )

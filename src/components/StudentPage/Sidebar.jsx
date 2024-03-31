@@ -36,21 +36,21 @@ function currentCompany(){
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white' active aria-current='true'>
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/UpComingCompany`} action className='border-0 border-bottom rounded bg-info text-white' active aria-current='true'>
                 <MDBIcon fas icon="university me-3" />
               Upcoming Companies
               </MDBListGroupItem>
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/getPlacedStudents`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="info me-3" />
                Placed Students
               </MDBListGroupItem>
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/getUnplacedStudents`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="door-open me-3" />
               Unplaced Students
               </MDBListGroupItem>
