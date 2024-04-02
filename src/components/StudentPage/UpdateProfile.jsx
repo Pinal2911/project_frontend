@@ -4,7 +4,7 @@ import { useState } from 'react'
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 
-const UpdateProfile =()=> {
+const UpProfile =()=> {
 
 
  const [student,setStudent]=useState({
@@ -13,7 +13,47 @@ const UpdateProfile =()=> {
   email:'',
   mname:'',
   password:'',
-  lname:''
+  lname:'',
+  alterEmail:'',
+  number:'',
+  alterNumber:'',
+  dob:'',
+  gender:'',
+      address:'',
+      permAddress:'',
+      branch:'',
+      division:'',
+      rollno:'',
+      prnNumber:'',
+      pictNumber:'',
+      sscPer:'',
+      board:'',
+      sscYear:'',
+      sscGap:'',
+       hscPer:'',
+      hscBoard:'',
+      hscYear:'',
+      hscGap:'',
+      diplomaPer:'',
+      diplomaYear:'',
+      diplomaGap:'',
+      mhCetPer:'',
+      jeeMains:'',
+      startYear:'',
+      fe1SGPA:'',
+      fe2SGPA:'',
+      se1SGPA:'',
+      se2SGPA:'',
+      te1SGPA:'',
+      te2SGPA:'',
+      backlogs:'',
+      yd:'',
+      adhar:'',
+      pan:'',
+      passport:'',
+      citizenship:'',
+      higherEducation:'',
+      amcat:''
  });
 
  const handleInputChange = (event) => {
@@ -76,46 +116,46 @@ const UpdateProfile =()=> {
           <label className="form-label" for="typeEmailX-2">Primary Email</label>
         </div>
 
-{/*         
+        
         <div className="form-outline mb-4">
-          <input type="email" value={alterEmail} onChange={(e) => setAlterEmail(e.target.value)} id="alter_email" className="form-control form-control-lg" />
+          <input type="email" name="alterEmail" value={student.alterEmail} onChange={handleInputChange} id="alter_email" className="form-control form-control-lg" />
           <label className="form-label" for="alter_email">Alternate Email</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} id="no" className="form-control form-control-lg" />
+          <input type="number" name="number" value={student.number} onChange={handleInputChange} id="no" className="form-control form-control-lg" />
           <label className="form-label" for="no">Mobile Number</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={anumber} onChange={(e) =>setANumber(e.target.value)} id="no2" className="form-control form-control-lg" />
+          <input type="number"  name="alterNumber" onChange={handleInputChange} value={student.alterNumber} id="no2" className="form-control form-control-lg" />
           <label className="form-label" for="no2">Alternate Mobile Number</label>
         </div>
 
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start  ">
         <label className="form-label" for="">Date of Birth :</label>
-        <DatePicker className=" d-flex form-control form-control-lg  " selected={sDate} onChange={(date) => setDate(date)}  style={{textAlign:'left'}}/>
+        <DatePicker className=" d-flex form-control form-control-lg  " name="dob" value={student.dob}  onChange={handleInputChange} style={{textAlign:'left'}}/>
         </div>
 
 {/* GENDER SECTION */}
-            {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start "> */}
-            {/* <label className="form-label" for="">Gender : </label>
+            <div className="form-outline mb-4 d-flex justify-content-start align-items-start "> 
+            <label className="form-label" for="">Gender : </label>
               <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked={gender === 'option1'} onChange={(e)=> setGender(e.target.value)} />
+            <input class="form-check-input" type="radio" name="option1" id="inlineRadio1" value={student.gender} checked={student.gender === 'option1'}  onChange={handleInputChange}/>
             <label class="form-check-label" for="inlineRadio1"> Male</label>
           </div>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked={gender=== 'option2'} onChange={(e)=> setGender(e.target.value)} />
+            <input class="form-check-input" type="radio" name="option2" id="inlineRadio2" value={student.gender} checked={student.gender=== 'option2'} onChange={handleInputChange} />
             <label class="form-check-label" for="inlineRadio2"> Female</label>
           </div>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked={gender=== 'option3'} onChange={(e)=> setGender(e.target.value)} />
+            <input class="form-check-input" type="radio" name="option3" id="inlineRadio3" value={student.gender} checked={student.gender=== 'option3'} onChange={handleInputChange} />
             <label class="form-check-label" for="inlineRadio3"> Other</label>
           </div>     
         </div>
-{/* ADDRESS SECTION */}
+{/* ADDRESS SECTION
     {/* <div className="form-outline mb-4">
           <input type="text" value={address} onChange={(e)=> setAddress(e.target.value)} id="caddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Current Address</label>
@@ -473,4 +513,4 @@ const UpdateProfile =()=> {
   )
 }
 
-export default UpdateProfile
+export default UpProfile
