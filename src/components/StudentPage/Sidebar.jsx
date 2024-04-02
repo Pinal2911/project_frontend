@@ -79,7 +79,7 @@ function currentCompany(){
 
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Student/StudentPage/updateProfile`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="user-edit me-3" />
                 Update Profile
               </MDBListGroupItem>

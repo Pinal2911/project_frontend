@@ -1,96 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DatePicker from 'react-datepicker'
 import { useState } from 'react'
 import "react-datepicker/dist/react-datepicker.css";
-function StudentRegister() {
-  
-  const [sDate,setDate]=useState(new Date());
-  const [fname,setFname]=useState('');
-  const [lname,setLname]=useState('');
-  const [mname,setMname]=useState('');
-  
-  const [password,setPassword]=useState('');
-  const [email,setEmail]=useState('');
-  const [alterEmail,setAlterEmail]=useState('');
+import axios from 'axios';
 
-  const[number,setNumber]=useState(0);
-  const[anumber,setANumber]=useState(0);
-  const[gender,setGender]=useState('option1');
-  const[address,setAddress]=useState('');
-  const[permAddr,setPermAddr]=useState('');
-  const[branch,setBranch]=useState('');
-  const[division,setDivision]=useState('');
-  const[rollno,setRollNo]=useState(0);
-  const[prnNumber,setPrnNumber]=useState('');
-  const[pictNumber,setPictNumber]=useState('');
-  const[sscPer,setSscPer]=useState(0);
-  const[board,setBoard]=useState('');
-  const[sscYear,setSscYear]=useState(0);
-  const[sscGap,setSscGap]=useState(0);
-  const[hscPer,setHscPer]=useState(0);
-  const[hscGap,setHscGap]=useState(0);
-  const[hscBoard,setHscBoard]=useState(0);
-  const[hscYear,setHscYear]=useState(0);
-  const[diplomaPer,setDiplomaPer]=useState(0);
-  const[diplomaGap,setDiplomaGap]=useState(0);
-  const[diplomaYear,setDipolmaYear]=useState(0);
-  const[mhCetPer,setMhCetPer]=useState(0);
-  const[jeeMains,setJeeMains]=useState(0);
-  const[startYear,setStartYear]=useState(0);
-  const[fe1SGPA,setfe1SGPA]=useState(0);
-  const[fe2SGPA,setfe2SGPA]=useState(0);
-  const[te1SGPA,sette1SGPA]=useState(0);
-  const[te2SGPA,sette2SGPA]=useState(0);
-  const[se1SGPA,setse1SGPA]=useState(0);
-  const[se2SGPA,setse2SGPA]=useState(0);
-  const[backlogs,setBacklogs]=useState(0);
-  const[yd,setYd]=useState(0);
-  const[adhar,setAdhar]=useState(0);
-  const[pan,setPan]=useState('');
-  const[passport,setPassport]=useState(0);
-  const[Citizenship,setCitizenship]=useState(0);
-  const[higherEducation,setHigherEd]=useState(0);
-  const[amcat,setAmcat]=useState(0);
+const UpdateProfile =()=> {
 
 
-  const handleSubmit=async(e)=>{
-    e.preventDefault();
-    try{
-      const response=await fetch('http://localhost:8080/api/placement/auth/student/register',{
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json'
-        },
-        body:JSON.stringify({
-          fname,
-          mname,
-          lname,
-          email,
-          alterEmail,
-          gender,
-          address,
-          division,
-          prnNumber,
-          pictNumber,
-          hscBoard,
-          board,
-          pan,
-          Citizenship,
-          password
-        })
-      });
-      if(response.ok){
-        alert('stud reg')
-      }else{
-        alert('failed')
-      }
-    }catch(error){
-      console.log('error ',error);
-    }
+ const [student,setStudent]=useState({
+  id:'',
+  fname:'',
+  email:'',
+  mname:'',
+  password:'',
+  lname:''
+ });
+
+ const handleInputChange = (event) => {
+  const { name, value } = event.target;
+  setStudent({ ...student, [name]: value });
+};
+
+ const handleSubmit=async(event)=>{
+  event.preventDefault();
+  try{
+    const response=await axios.put(`http://localhost:8080/api/student/placement/editStudentProfile/${student.id}`,student)
+    console.log(response)
+  }catch(error){
+    console.log(error)
   }
-
-
-
+ };
 
   return (
     
@@ -103,36 +42,41 @@ function StudentRegister() {
     <div className="card shadow-2-strong" style={{borderRadius: '1rem'}}>
       <div className="card-body p-5 text-center">
     {/* BASIC STUDENT INFO STRATS FROM HERE */}
-        <h1 className="display-5 mb-5">STUDENT REGISTRATION</h1>
-    
+        <h1 className="display-5 mb-5">STUDENT DETAILS UPDATE</h1>
+        
         <div className="form-outline mb-4">
-          <input type="text" value={fname} onChange={(e) => setFname(e.target.value)} id="fname" className="form-control form-control-lg" />
+          <input type="text" name="id" value={student.id} onChange={handleInputChange} id="id" className="form-control form-control-lg" />
+          <label className="form-label" for="Id">Id</label>
+        </div>
+        
+        <div className="form-outline mb-4">
+          <input type="text" name="fname" value={student.fname} onChange={handleInputChange} id="fname" className="form-control form-control-lg" />
           <label className="form-label" for="fname">FirstName</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" value={mname} onChange={(e) => setMname(e.target.value)} id="mname" className="form-control form-control-lg" />
+          <input type="text" name="mname" value={student.mname} onChange={handleInputChange} id="mname" className="form-control form-control-lg" />
           <label className="form-label" for="mname">MiddleName</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" value={lname} onChange={(e) => setLname(e.target.value)} id="lname" className="form-control form-control-lg" />
+          <input type="text"name="lname" value={student.lname}  onChange={handleInputChange} id="lname" className="form-control form-control-lg" />
           <label className="form-label" for="lname">LastName</label>
         </div>
 
 
         <div className="form-outline mb-4">
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} id="password" className="form-control form-control-lg" />
+          <input type="password" name="password" value={student.password} onChange={handleInputChange} id="password" className="form-control form-control-lg" />
           <label className="form-label" for="password">Password</label>
         </div>
 
 
         <div className="form-outline mb-4">
-          <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} id="typeEmailX-2" className="form-control form-control-lg" />
+          <input type="email"  name="email" value={student.email}  onChange={handleInputChange} id="typeEmailX-2" className="form-control form-control-lg" />
           <label className="form-label" for="typeEmailX-2">Primary Email</label>
         </div>
 
-        
+{/*         
         <div className="form-outline mb-4">
           <input type="email" value={alterEmail} onChange={(e) => setAlterEmail(e.target.value)} id="alter_email" className="form-control form-control-lg" />
           <label className="form-label" for="alter_email">Alternate Email</label>
@@ -154,8 +98,8 @@ function StudentRegister() {
         </div>
 
 {/* GENDER SECTION */}
-            <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
-            <label className="form-label" for="">Gender : </label>
+            {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start "> */}
+            {/* <label className="form-label" for="">Gender : </label>
               <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked={gender === 'option1'} onChange={(e)=> setGender(e.target.value)} />
             <label class="form-check-label" for="inlineRadio1"> Male</label>
@@ -172,7 +116,7 @@ function StudentRegister() {
           </div>     
         </div>
 {/* ADDRESS SECTION */}
-    <div className="form-outline mb-4">
+    {/* <div className="form-outline mb-4">
           <input type="text" value={address} onChange={(e)=> setAddress(e.target.value)} id="caddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Current Address</label>
         </div>
@@ -180,10 +124,10 @@ function StudentRegister() {
         <div className="form-outline mb-4">
           <input type="text" value={permAddr} onChange={(e)=> setPermAddr(e.target.value)} id="paddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Permanent Address</label>
-        </div>
+        </div> */}
 
 {/* BRANCH SECTION */}
-        <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+        {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Branch : </label>
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"  checked={branch=== 'option1'}onChange={(e)=> setBranch(e.target.value)}/>
@@ -201,19 +145,19 @@ function StudentRegister() {
       </div>     
     </div>
 {/* DIVISION SECTION */}
-    <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
     <label className="form-label" for="">BE Division : </label>
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked={division=== 'option1'} onChange={(e)=> setDivision(e.target.value)}/>
   <label class="form-check-label" for="inlineRadio1">1</label>
-</div>
-
+</div> */} 
+{/* 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked={division=== 'option2'} onChange={(e)=> setDivision(e.target.value)}/>
   <label class="form-check-label" for="inlineRadio2">2</label>
-</div>
+</div> */} 
 
-<div class="form-check form-check-inline">
+{/* <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked={division=== 'option3'} onChange={(e)=> setDivision(e.target.value)} />
   <label class="form-check-label" for="inlineRadio3">3 </label>
 </div>
@@ -274,7 +218,7 @@ function StudentRegister() {
           <label className="form-label" for="per10">10th Percentage</label>
         </div>
         {/* BOARD SECTION */}
-        <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+        {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
     <label className="form-label" for="">Board : </label>
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
 <div class="form-check form-check-inline">
@@ -294,10 +238,10 @@ function StudentRegister() {
   <label class="form-check-label" for="other">Other </label>
 </div>
 </div>
-</div>
+</div> */}
 {/* 10TH INFO */}
 
-        <div className="form-outline mb-4">
+        {/* <div className="form-outline mb-4">
           <input type="number" value={sscYear} onChange={(e)=>setSscYear(e.target.value)} id="pass_year_10" className="form-control form-control-lg" />
           <label className="form-label" for="pass_year_10">Passing Year10th :</label>
         </div>
@@ -306,14 +250,14 @@ function StudentRegister() {
         <div className="form-outline mb-4">
           <input type="number" value={sscGap} onChange={(e)=>setSscGap(e.target.value)} id="gap_10" className="form-control form-control-lg" />
           <label className="form-label" for="gap_10">Educational Gap after 10th :</label>
-        </div>
+        </div> */}
 
       
 
 
 {/* 12TH INFO */}
 
-        <div className="form-outline mb-4">
+        {/* <div className="form-outline mb-4">
           <input type="number" id="per10" className="form-control form-control-lg" />
           <label className="form-label" for="per12">12th Percentage</label>
         </div>
@@ -338,9 +282,9 @@ function StudentRegister() {
   <label class="form-check-label" for="other12">Other </label>
 </div>
 </div>
-</div>
+</div> */}
 
-
+{/* 
         <div className="form-outline mb-4">
           <input type="number" value={hscYear} onChange={(e) => setHscYear(e.target.value)} id="pass_year_12" className="form-control form-control-lg" />
           <label className="form-label" for="pass_year_12">Passing Year12th :</label>
@@ -355,13 +299,13 @@ function StudentRegister() {
         <div className="form-outline mb-4">
           <input type="text" id="gap_reason_12" className="form-control form-control-lg" />
           <label className="form-label" for="gap_reason_12">Gap Reason :</label>
-        </div>
+        </div> */}
 
 
 
 {/* DIPLOMA INFO */}
 
-        <div className="form-outline mb-4">
+        {/* <div className="form-outline mb-4">
           <input type="number" id="dper" value={diplomaPer} onChange={(e)=>setDiplomaPer(e.target.value)} className="form-control form-control-lg" />
           <label className="form-label" for="dper">Diploma Percentage :</label>
         </div>
@@ -416,9 +360,9 @@ function StudentRegister() {
         <div className="form-outline mb-4">
           <input type="number"   value={se2SGPA} onChange={(e)=>setse2SGPA(e.target.value)} id="se2_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="se2_sgpa">SE 2st sem SGPA :</label>
-        </div>
+        </div> */} 
 
-
+{/* 
         <div className="form-outline mb-4">
           <input type="number" value={te1SGPA} onChange={(e) =>sette1SGPA(e.target.value)} id="te_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="te_sgpa">TE 1st sem SGPA :</label>
@@ -462,26 +406,26 @@ function StudentRegister() {
 
         <div className="form-outline mb-4">
           <input type="text" id="passport_number" className="form-control form-control-lg" value={passport} onChange={(e)=>setPassport(e.target.value)} />
-          <label className="form-label" for="passport_number">Passport Number :</label>
-        </div>
+          <label className="form-label" for="passport_number">Passport Number :</label> */}
+        {/* </div>  */}
 {/* CITIZENSHIP INFO */}
-
+{/* 
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Citizenship : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indian" value="option1" checked={Citizenship==='option1'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indian" value="option1" checked={citizenship==='option1'} onChange={(e)=>setCitizenship(e.target.value)}/>
         <label class="form-check-label" for="indian">Indian</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="option2" checked={Citizenship==='option2'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="option2" checked={citizenship==='option2'} onChange={(e)=>setCitizenship(e.target.value)}/>
         <label class="form-check-label" for="other">Other </label>
       </div>
         
-    </div>
+    </div> */}
 
 {/* EDUCATIONAL INFO */}
-    <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Higher Education : </label>
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_yes" value="option1"  checked={higherEducation==='option1'} onChange={(e)=>setHigherEd(e.target.value)}/>
@@ -497,10 +441,10 @@ function StudentRegister() {
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_maybe" value="option3" checked={higherEducation==='option3'} onChange={(e)=>setHigherEd(e.target.value)}/>
         <label class="form-check-label" for="ed_maybe">Maybe</label>
       </div>
-    </div>
+    </div> */}
 
 {/* AMCAT EXAM INFO */}
-    <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">AMCAT EXAM : </label>
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_yes" value="option1" checked={amcat==='option1'} onChange={(e)=>setAmcat(e.target.value)}/>
@@ -510,7 +454,7 @@ function StudentRegister() {
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_no" value="option2" checked={amcat==='option2'} onChange={(e)=>setAmcat(e.target.value)}/>
         <label class="form-check-label" for="amcat_no">No</label>
-      </div>
+      </div> */}
 {/* NOTE YOU HAVE TO ADD UPLOAD DOCUMENTS PART FROM EMAIL */}
 {/* COORECT CSS OF THIS FORM AFTER BACKEND IMPLEMENTATION */}
 
@@ -525,8 +469,8 @@ function StudentRegister() {
 </div>
 </div>
 
-</div>
+// </div>
   )
 }
 
-export default StudentRegister
+export default UpdateProfile

@@ -47,9 +47,9 @@ const fetchData=async()=>{
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">COMPANY NAME</th>
+      <th scope="col">COMPANYNAME</th>
       <th scope="col">PACKAGE</th>
-      <th scope="col">NO OF ROUNDS</th>
+      <th scope="col">NO_ROUNDS</th>
       <th scope="col">ROLE</th>
       <th scope="col">SKILLS</th>
       <th scope="col">LOCATION</th>
@@ -65,8 +65,8 @@ const fetchData=async()=>{
     
       <td>{row.companyName}</td>
       <td>{row.pkgAmt}</td>
-      <td>{row.pkgAmt}</td>
-      <td>{row.roundNo}</td>
+     
+      <td>{row.roundsNo}</td>
       <td>{row.role}</td>
       <td>{row.skills}</td>
       <td>{row.location}</td>

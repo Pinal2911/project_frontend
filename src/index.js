@@ -32,6 +32,7 @@ import UpcomingCompany from './components/StudentPage/UpcomingCompany.jsx';
 import PlacedStudent from './components/StudentPage/PlacedStudent.jsx';
 import UnplacedStudents from './components/StudentPage/UnplacedStudents.jsx';
 import RoundDetails from './components/StudentPage/RoundDetails.jsx';
+import UpdateProfile from './components/StudentPage/UpdateProfile.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -75,6 +76,7 @@ const router= createBrowserRouter(
         <Route path='/placement/Student/StudentPage/getPlacedStudents' element={<PlacedStudent/>}></Route>
         <Route path='/placement/Student/StudentPage/getUnplacedStudents' element={<UnplacedStudents/>}></Route>
         <Route path='/placement/Student/StudentPage/getRoundDetails' element={<RoundDetails/>}></Route>
+        <Route path='/placement/Student/StudentPage/updateProfile' element={<UpdateProfile/>}></Route>
     </Route>
   )
 )
