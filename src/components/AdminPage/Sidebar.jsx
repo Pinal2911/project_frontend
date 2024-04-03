@@ -19,7 +19,7 @@ export default function App() {
         <div className="d-flex mt-10">
           <MDBListGroup flush className="bg-info">
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded rounded bg-info text-white'>
+              <MDBListGroupItem tag='a'  href={`/placement/Admin/AdminPage/CurrentCompany`} action className='border-0 border-bottom rounded rounded bg-info text-white'>
                 <MDBIcon fas icon="align-justify me-3" />
               Current Companies
               </MDBListGroupItem>

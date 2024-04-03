@@ -34,6 +34,7 @@ import UnplacedStudents from './components/StudentPage/UnplacedStudents.jsx';
 import RoundDetails from './components/StudentPage/RoundDetails.jsx';
 import UpdateProfile from './components/StudentPage/UpdateProfile.jsx';
 import Notification from './components/StudentPage/Notification.jsx';
+import CurrComp from './components/AdminPage/CurrComp.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -79,6 +80,9 @@ const router= createBrowserRouter(
         <Route path='/placement/Student/StudentPage/getRoundDetails' element={<RoundDetails/>}></Route>
         <Route path='/placement/Student/StudentPage/updateProfile' element={<UpdateProfile/>}></Route>
         <Route path='/placement/Student/StudentPage/notifications' element={<Notification/>}></Route>
+
+
+        <Route path='/placement/Admin/AdminPage/CurrentCompany' element={<CurrComp/>}></Route>
     </Route>
   )
 )

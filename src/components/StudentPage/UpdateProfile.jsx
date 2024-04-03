@@ -19,7 +19,7 @@ const UpProfile =()=> {
   alterNumber:'',
   dob:'',
   gender:'',
-      address:'',
+  address:'',
       permAddress:'',
       branch:'',
       division:'',
@@ -157,12 +157,12 @@ const UpProfile =()=> {
         </div>
 ADDRESS SECTION
     <div className="form-outline mb-4">
-          <input type="text" value={student.address} onChange={handleInputChange} id="caddr" className="form-control form-control-lg" />
+          <input type="text" name="address" value={student.address} onChange={handleInputChange} id="caddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Current Address</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" value={student.permAddress} onChange={handleInputChange} id="paddr" className="form-control form-control-lg" />
+          <input type="text" name="permAddress" value={student.permAddress} onChange={handleInputChange} id="paddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Permanent Address</label>
         </div>
 
@@ -423,12 +423,12 @@ DIVISION SECTION
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Are you YD (Year Down) : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="yd" id="yes" value="yes" checked={student.yd==='yes'} onChange={handleInputChange}/>
+        <input class="form-check-input" type="radio" name="yd" id="yes" value="True" checked={student.yd==='True'} onChange={handleInputChange}/>
         <label class="form-check-label" for="yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="yd" id="no" value="no" checked={student.yd==='no'} onChange={handleInputChange}/>
+        <input class="form-check-input" type="radio" name="yd" id="no" value="False" checked={student.yd==='False'} onChange={handleInputChange}/>
         <label class="form-check-label" for="no">No</label>
       </div>
         
@@ -468,17 +468,17 @@ DIVISION SECTION
      <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Higher Education : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="higherEducation" id="ed_yes" value="yes"  checked={student.higherEducation==='yes'} onChange={handleInputChange}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_yes" value="True"  checked={student.higherEducation==='True'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="higherEducation" id="ed_no" value="no" checked={student.higherEducation==='no'} onChange={handleInputChange}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_no" value="False" checked={student.higherEducation==='False'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_no">No</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="higherEducation" id="ed_maybe" value="maybe" checked={student.higherEducation==='maybe'} onChange={handleInputChange}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_maybe" value="False" checked={student.higherEducation==='False'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_maybe">Maybe</label>
       </div>
     </div> 
@@ -487,12 +487,12 @@ DIVISION SECTION
      <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">AMCAT EXAM : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_yes" value="yes" checked={student.amcat==='yes'} />
+        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_yes" value="True" checked={student.amcat==='True'} />
         <label class="form-check-label" for="amcat_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_no" value="no" checked={student.amcat==='yes'} />
+        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_no" value="False" checked={student.amcat==='False'} />
         <label class="form-check-label" for="amcat_no">No</label>
       </div>
 {/* NOTE YOU HAVE TO ADD UPLOAD DOCUMENTS PART FROM EMAIL */}
@@ -500,7 +500,7 @@ DIVISION SECTION
 
      
     </div>
-        <button onClick={handleSubmit} className="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+        <button onClick={handleSubmit} className="btn btn-primary btn-lg btn-block" type="submit">Update</button>
         
        
       </div>
