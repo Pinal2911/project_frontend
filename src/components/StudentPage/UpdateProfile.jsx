@@ -141,164 +141,164 @@ const UpProfile =()=> {
             <div className="form-outline mb-4 d-flex justify-content-start align-items-start "> 
             <label className="form-label" for="">Gender : </label>
               <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="option1" id="inlineRadio1" value={student.gender} checked={student.gender === 'option1'}  onChange={handleInputChange}/>
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" checked={student.gender === 'male'}  onChange={handleInputChange}/>
             <label class="form-check-label" for="inlineRadio1"> Male</label>
           </div>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="option2" id="inlineRadio2" value={student.gender} checked={student.gender=== 'option2'} onChange={handleInputChange} />
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female" checked={student.gender=== 'female'} onChange={handleInputChange} />
             <label class="form-check-label" for="inlineRadio2"> Female</label>
           </div>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="option3" id="inlineRadio3" value={student.gender} checked={student.gender=== 'option3'} onChange={handleInputChange} />
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="other" checked={student.gender=== 'other'} onChange={handleInputChange} />
             <label class="form-check-label" for="inlineRadio3"> Other</label>
           </div>     
         </div>
-{/* ADDRESS SECTION
-    {/* <div className="form-outline mb-4">
-          <input type="text" value={address} onChange={(e)=> setAddress(e.target.value)} id="caddr" className="form-control form-control-lg" />
+ADDRESS SECTION
+    <div className="form-outline mb-4">
+          <input type="text" value={student.address} onChange={handleInputChange} id="caddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Current Address</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" value={permAddr} onChange={(e)=> setPermAddr(e.target.value)} id="paddr" className="form-control form-control-lg" />
+          <input type="text" value={student.permAddress} onChange={handleInputChange} id="paddr" className="form-control form-control-lg" />
           <label className="form-label" for="cadrr">Permanent Address</label>
-        </div> */}
+        </div>
 
-{/* BRANCH SECTION */}
-        {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+BRANCH SECTION
+         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Branch : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"  checked={branch=== 'option1'}onChange={(e)=> setBranch(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="branch" id="inlineRadio1" value="CS"  checked={student.branch=== 'CS'} onChange={handleInputChange}/>
         <label class="form-check-label" for="inlineRadio1">CS</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"checked={branch=== 'option2'}  onChange={(e)=> setBranch(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="branch" id="inlineRadio2" value="IT"checked={student.branch=== 'IT'}  onChange={handleInputChange}/>
         <label class="form-check-label" for="inlineRadio2">IT</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked={branch=== 'option3'} onChange={(e)=> setBranch(e.target.value)} />
+        <input class="form-check-input" type="radio" name="branch" id="inlineRadio3" value="ENTC" checked={student.branch=== 'ENTC'} onChange={handleInputChange} />
         <label class="form-check-label" for="inlineRadio3">ENTC</label>
       </div>     
     </div>
-{/* DIVISION SECTION */}
-    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+DIVISION SECTION
+     <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
     <label className="form-label" for="">BE Division : </label>
   <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked={division=== 'option1'} onChange={(e)=> setDivision(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio1" value="BE1" checked={student.division=== 'BE1'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio1">1</label>
-</div> */} 
-{/* 
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked={division=== 'option2'} onChange={(e)=> setDivision(e.target.value)}/>
-  <label class="form-check-label" for="inlineRadio2">2</label>
-</div> */} 
+</div> 
 
-{/* <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked={division=== 'option3'} onChange={(e)=> setDivision(e.target.value)} />
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio2" value="BE2" checked={student.division=== 'BE2'} onChange={handleInputChange}/>
+  <label class="form-check-label" for="inlineRadio2">2</label>
+</div> 
+
+ <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio3" value="BE3" checked={student.division=== 'BE3'} onChange={handleInputChange} />
   <label class="form-check-label" for="inlineRadio3">3 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4"  checked={division=== 'option4'} onChange={(e)=> setDivision(e.target.value)} />
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio3" value="BE4"  checked={student.division=== 'BE4'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio4">4 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option5" checked={division=== 'option5'} onChange={(e)=> setDivision(e.target.value)} />
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio3" value="BE5" checked={student.division=== 'BE5'} onChange={handleInputChange} />
   <label class="form-check-label" for="inlineRadio5">5</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option6"  checked={division=== 'option6'} onChange={(e)=> setDivision(e.target.value)} />
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio3" value="BE6"  checked={student.division=== 'BE6'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio6">6 </label>
 </div>
 </div>
 <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option7"  checked={division=== 'option7'} onChange={(e)=> setDivision(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio3" value="BE7"  checked={student.division=== 'BE7'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio7">7 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8" value="option8" checked={division=== 'option8'} onChange={(e)=> setDivision(e.target.value)} />
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio8" value="BE8" checked={student.division=== 'BE8'} onChange={handleInputChange} />
   <label class="form-check-label" for="inlineRadio3">8 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9" value="option9"  checked={division=== 'option9'} onChange={(e)=> setDivision(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio9" value="BE9"  checked={student.division=== 'BE9'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio3">9 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10" value="option10" checked={division=== 'option10'} onChange={(e)=> setDivision(e.target.value)} />
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio10" value="BE10" checked={student.division=== 'BE10'}  onChange={handleInputChange} />
   <label class="form-check-label" for="inlineRadio3">10 </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option11"  checked={division=== 'option11'} onChange={(e)=> setDivision(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="division" id="inlineRadio11" value="BE11"  checked={student.division=== 'BE11'} onChange={handleInputChange}/>
   <label class="form-check-label" for="inlineRadio3">11 </label>
 </div>
 </div>
 
         <div className="form-outline mb-4">
-          <input value={rollno} onChange={(e) => setRollNo(e.target.value)} type="number" id="be_no" className="form-control form-control-lg" />
+          <input value={student.rollno} name="rollno" onChange={handleInputChange} type="number" id="be_no" className="form-control form-control-lg" />
           <label className="form-label" for="be_no">BE Roll No</label>
         </div>
 
       
         <div className="form-outline mb-4">
-          <input type="number" value={prnNumber} onChange={(e) =>setPrnNumber(e.target.value)} id="prn_number" className="form-control form-control-lg" />
+          <input type="number" name="prnNumber" value={student.prnNumber} onChange={handleInputChange} id="prn_number" className="form-control form-control-lg" />
           <label className="form-label" for="prn_number">University PRN Number</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={pictNumber} onChange={(e) =>setPictNumber(e.target.value)} id="reg_number" className="form-control form-control-lg" />
+          <input type="number" name="pictNumber"value={student.pictNumber} onChange={handleInputChange} id="reg_number" className="form-control form-control-lg" />
           <label className="form-label" for="reg_number">PICT Registration Number</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={sscPer} onChange={(e)=> setSscPer(e.target.value)} id="per10" className="form-control form-control-lg" />
+          <input type="number" name="sscPer" value={student.sscPer} onChange={handleInputChange} id="per10" className="form-control form-control-lg" />
           <label className="form-label" for="per10">10th Percentage</label>
         </div>
         {/* BOARD SECTION */}
-        {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+        <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
     <label className="form-label" for="">Board : </label>
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ssc" value="option7" checked={board=== 'option7'} onChange={(e)=> setBoard(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="board" id="ssc" value="SSC" checked={student.board=== 'SSC'} onChange={handleInputChange}/>
   <label class="form-check-label" for="ssc">SSC </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cbse" value="option8"  checked={board=== 'option8'} onChange={(e)=> setBoard(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="board" id="cbse" value="CBSE"  checked={student.board=== 'CBSE'} onChange={handleInputChange}/>
   <label class="form-check-label" for="cbse">CBSE </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="icse" id="inlineRadio9" value="option9"   checked={board=== 'option9'} onChange={(e)=> setBoard(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="board" id="inlineRadio9" value="ICSE"   checked={student.board=== 'ICSE'} onChange={handleInputChange}/>
   <label class="form-check-label" for="icse">ICSE </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="option10" checked={board=== 'option10'}  onChange={(e)=> setBoard(e.target.value)} />
+  <input class="form-check-input" type="radio" name="board" id="other" value="other" checked={student.board=== 'other'}  onChange={handleInputChange} />
   <label class="form-check-label" for="other">Other </label>
 </div>
 </div>
-</div> */}
+</div>
 {/* 10TH INFO */}
 
-        {/* <div className="form-outline mb-4">
-          <input type="number" value={sscYear} onChange={(e)=>setSscYear(e.target.value)} id="pass_year_10" className="form-control form-control-lg" />
+         <div className="form-outline mb-4">
+          <input type="number" name="sscYear" value={student.sscYear} onChange={handleInputChange} id="pass_year_10" className="form-control form-control-lg" />
           <label className="form-label" for="pass_year_10">Passing Year10th :</label>
         </div>
 
         
         <div className="form-outline mb-4">
-          <input type="number" value={sscGap} onChange={(e)=>setSscGap(e.target.value)} id="gap_10" className="form-control form-control-lg" />
+          <input type="number" name="sscGap" value={student.sscGap} onChange={handleInputChange} id="gap_10" className="form-control form-control-lg" />
           <label className="form-label" for="gap_10">Educational Gap after 10th :</label>
-        </div> */}
+        </div> 
 
       
 
 
 {/* 12TH INFO */}
 
-        {/* <div className="form-outline mb-4">
-          <input type="number" id="per10" className="form-control form-control-lg" />
+         <div className="form-outline mb-4">
+          <input type="number" id="per10" name="hscPer" value={student.hscPer} onChange={handleInputChange}className="form-control form-control-lg" />
           <label className="form-label" for="per12">12th Percentage</label>
         </div>
         
@@ -306,115 +306,115 @@ const UpProfile =()=> {
     <label className="form-label" for="">Board : </label>
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ssc12" value="option7"  checked={hscBoard=== 'option7'}  onChange={(e)=>setHscBoard(e.target.value)}/>
-  <label class="form-check-label" for="ssc12">SSC </label>
+  <input class="form-check-input" type="radio" name="hscBoard" id="ssc12" value="HSC"  checked={student.hscBoard=== 'HSC'}  onChange={handleInputChange}/>
+  <label class="form-check-label" for="ssc12">HSC </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cbse12" value="option8"  checked={hscBoard=== 'option8'} onChange={(e)=>setHscBoard(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="hscBoard" id="cbse12" value="CBSE"  checked={student.hscBoard=== 'CBSE'} onChange={handleInputChange}/>
   <label class="form-check-label" for="cbse12">CBSE </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="icse" id="icse12" value="option9" checked={hscBoard=== 'option9'} onChange={(e) => setHscBoard(e.target.value)} />
+  <input class="form-check-input" type="radio" name="hscBoard" id="icse12" value="ICSE" checked={student.hscBoard=== 'ICSE'} onChange={handleInputChange}/>
   <label class="form-check-label" for="icse12">ICSE </label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other12" value="option10" checked={hscBoard=== 'option10'}  onChange={(e) => setHscBoard(e.target.value)}/>
+  <input class="form-check-input" type="radio" name="hscBoard" id="other12" value="other" checked={student.hscBoard=== 'other'} onChange={handleInputChange}/>
   <label class="form-check-label" for="other12">Other </label>
 </div>
 </div>
-</div> */}
+</div> 
 
-{/* 
+ 
         <div className="form-outline mb-4">
-          <input type="number" value={hscYear} onChange={(e) => setHscYear(e.target.value)} id="pass_year_12" className="form-control form-control-lg" />
+          <input type="number" name="hscYear" value={student.hscYear} onChange={handleInputChange} id="pass_year_12" className="form-control form-control-lg" />
           <label className="form-label" for="pass_year_12">Passing Year12th :</label>
         </div>
 
         
         <div className="form-outline mb-4">
-          <input type="number" id="gap_12" value={hscGap} onChange={(e) =>setHscGap(e.target.value)} className="form-control form-control-lg" />
+          <input type="number" name="hscGap" value={student.hscGap} onChange={handleInputChange} className="form-control form-control-lg" />
           <label className="form-label" for="gap_12">Educational Gap after 12th :</label>
         </div>
 
-        <div className="form-outline mb-4">
+        {/* <div className="form-outline mb-4">
           <input type="text" id="gap_reason_12" className="form-control form-control-lg" />
           <label className="form-label" for="gap_reason_12">Gap Reason :</label>
-        </div> */}
+        </div>  */}
 
 
 
 {/* DIPLOMA INFO */}
 
-        {/* <div className="form-outline mb-4">
-          <input type="number" id="dper" value={diplomaPer} onChange={(e)=>setDiplomaPer(e.target.value)} className="form-control form-control-lg" />
+         <div className="form-outline mb-4">
+          <input type="number" id="dper" value={student.diplomaPer} onChange={handleInputChange} name="diplomaPer" className="form-control form-control-lg" />
           <label className="form-label" for="dper">Diploma Percentage :</label>
         </div>
         
         <div className="form-outline mb-4">
-          <input type="number" id="dip_year" value={diplomaYear} onChange={(e)=>setDipolmaYear(e.target.value)} className="form-control form-control-lg" />
+          <input type="number" id="dip_year" value={student.diplomaYear} onChange={handleInputChange} name="diplomaYear" className="form-control form-control-lg" />
           <label className="form-label" for="dip_year">Passing year :</label>
         </div>
 
         
         <div className="form-outline mb-4">
-          <input type="number" value={diplomaGap} onChange={(e)=>setDiplomaGap(e.target.value)} id="gap_dip" className="form-control form-control-lg" />
+          <input type="number" value={student.diplomaGap} onChange={handleInputChange} name="diplomaGap" id="gap_dip" className="form-control form-control-lg" />
           <label className="form-label" for="gap_dip">Educational Gap after Diploma :</label>
         </div>
 
-        <div className="form-outline mb-4">
+        {/* <div className="form-outline mb-4">
           <input type="text" id="gap_reason_dip" className="form-control form-control-lg" />
           <label className="form-label" for="gap_reason_dip">Gap Reason :</label>
-        </div>
+        </div> */}
 
         <div className="form-outline mb-4">
-          <input type="number" value={mhCetPer} onChange={(e)=>setMhCetPer(e.target.value)} id="mh-cet" className="form-control form-control-lg" />
+          <input type="number" value={student.mhCetPer} onChange={handleInputChange} name="mhCetPer" id="mh-cet" className="form-control form-control-lg" />
           <label className="form-label" for="mh-cet">MH-CET Percentile :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={jeeMains} onChange={(e) =>setJeeMains(e.target.value)} id="jee_mains" className="form-control form-control-lg" />
+          <input type="number" value={student.jeeMains} onChange={handleInputChange} name="jeeMains" id="jee_mains" className="form-control form-control-lg" />
           <label className="form-label" for="jee_mains">JEE Mains :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={startYear} onChange={(e) => setStartYear(e.target.value)} id="clg_start_year" className="form-control form-control-lg" />
+          <input type="number" value={student.startYear} name="startYear" onChange={handleInputChange} id="clg_start_year" className="form-control form-control-lg" />
           <label className="form-label" for="clg_start_year">College Start Year :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={fe1SGPA} onChange={(e) =>setfe1SGPA(e.target.value) } id="fe_sgpa" className="form-control form-control-lg" />
+          <input type="number" value={student.fe1SGPA} onChange={handleInputChange} name="fe1SGPA" id="fe_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="fe_sgpa">FE 1st sem SGPA :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number"value={fe2SGPA} onChange={(e) =>setfe2SGPA(e.target.value)} id="fe2_sgpa" className="form-control form-control-lg" />
+          <input type="number"value={student.fe2SGPA} onChange={handleInputChange} name="fe2SGPA" id="fe2_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="fe2_sgpa">FE 2st sem SGPA :</label>
         </div>
 
 
         <div className="form-outline mb-4">
-          <input type="number" value={se1SGPA} onChange={(e)=>setse1SGPA(e.target.value)} id="se_sgpa" className="form-control form-control-lg" />
+          <input type="number" value={student.se1SGPA} onChange={handleInputChange} name="se1SGPA" id="se_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="fe_sgpa">SE 1st sem SGPA :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number"   value={se2SGPA} onChange={(e)=>setse2SGPA(e.target.value)} id="se2_sgpa" className="form-control form-control-lg" />
+          <input type="number"   value={student.se2SGPA} onChange={handleInputChange} name="se2SGPA" id="se2_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="se2_sgpa">SE 2st sem SGPA :</label>
-        </div> */} 
+        </div> 
 
-{/* 
+
         <div className="form-outline mb-4">
-          <input type="number" value={te1SGPA} onChange={(e) =>sette1SGPA(e.target.value)} id="te_sgpa" className="form-control form-control-lg" />
+          <input type="number" name="te1SGPA" value={student.te1SGPA} onChange={handleInputChange} id="te_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="te_sgpa">TE 1st sem SGPA :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" value={te2SGPA} onChange={(e) =>sette2SGPA(e.target.value)} id="te2_sgpa" className="form-control form-control-lg" />
+          <input type="number" name="te2SGPA" value={student.te2SGPA} onChange={handleInputChange} id="te2_sgpa" className="form-control form-control-lg" />
           <label className="form-label" for="te2_sgpa">TE 2st sem SGPA :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="number" id="backlog" value={backlogs} onChange={(e)=>setBacklogs(e.target.value)} className="form-control form-control-lg" />
+          <input type="number" id="backlog" name="backlogs" value={student.backlogs} onChange={handleInputChange} className="form-control form-control-lg" />
           <label className="form-label" for="backlog">Total active backlogs :</label>
         </div>
 
@@ -423,78 +423,78 @@ const UpProfile =()=> {
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Are you YD (Year Down) : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1" checked={yd==='option1'} onChange={(e)=>setYd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="yd" id="yes" value="yes" checked={student.yd==='yes'} onChange={handleInputChange}/>
         <label class="form-check-label" for="yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option2" checked={yd==='option2'} onChange={(e)=>setYd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="yd" id="no" value="no" checked={student.yd==='no'} onChange={handleInputChange}/>
         <label class="form-check-label" for="no">No</label>
       </div>
         
     </div>
 
     <div className="form-outline mb-4">
-          <input type="text" id="adhar_number" className="form-control form-control-lg" value={adhar} onChange={(e)=>setAdhar(e.target.value)}/>
+          <input type="text" id="adhar_number" className="form-control form-control-lg" name="adhar" value={student.adhar} onChange={handleInputChange}/>
           <label className="form-label" for="adhar_number">Adhar Number :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" id="pan_number" className="form-control form-control-lg" value={pan} onChange={(e)=>setPan(e.target.value)} />
+          <input type="text" id="pan_number" className="form-control form-control-lg" value={student.pan} onChange={handleInputChange} name="pan" />
           <label className="form-label" for="pan_number">PAN Number :</label>
         </div>
 
         <div className="form-outline mb-4">
-          <input type="text" id="passport_number" className="form-control form-control-lg" value={passport} onChange={(e)=>setPassport(e.target.value)} />
-          <label className="form-label" for="passport_number">Passport Number :</label> */}
-        {/* </div>  */}
+          <input type="text" id="passport_number" className="form-control form-control-lg" value={student.passport} onChange={handleInputChange} name="passport" />
+          <label className="form-label" for="passport_number">Passport Number :</label> 
+         </div>  
 {/* CITIZENSHIP INFO */}
-{/* 
+ 
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Citizenship : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indian" value="option1" checked={citizenship==='option1'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="citizenship" id="indian" value="indian" checked={student.citizenship==='indian'} onChange={handleInputChange}/>
         <label class="form-check-label" for="indian">Indian</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="option2" checked={citizenship==='option2'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="citizenship" id="other" value="other" checked={student.citizenship==='other'} onChange={handleInputChange}/>
         <label class="form-check-label" for="other">Other </label>
       </div>
         
-    </div> */}
+    </div> 
 
 {/* EDUCATIONAL INFO */}
-    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+     <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Higher Education : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_yes" value="option1"  checked={higherEducation==='option1'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_yes" value="yes"  checked={student.higherEducation==='yes'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_no" value="option2" checked={higherEducation==='option2'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_no" value="no" checked={student.higherEducation==='no'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_no">No</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_maybe" value="option3" checked={higherEducation==='option3'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="higherEducation" id="ed_maybe" value="maybe" checked={student.higherEducation==='maybe'} onChange={handleInputChange}/>
         <label class="form-check-label" for="ed_maybe">Maybe</label>
       </div>
-    </div> */}
+    </div> 
 
 {/* AMCAT EXAM INFO */}
-    {/* <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
+     <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">AMCAT EXAM : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_yes" value="option1" checked={amcat==='option1'} onChange={(e)=>setAmcat(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_yes" value="yes" checked={student.amcat==='yes'} />
         <label class="form-check-label" for="amcat_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_no" value="option2" checked={amcat==='option2'} onChange={(e)=>setAmcat(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="amcat" onChange={handleInputChange} id="amcat_no" value="no" checked={student.amcat==='yes'} />
         <label class="form-check-label" for="amcat_no">No</label>
-      </div> */}
+      </div>
 {/* NOTE YOU HAVE TO ADD UPLOAD DOCUMENTS PART FROM EMAIL */}
 {/* COORECT CSS OF THIS FORM AFTER BACKEND IMPLEMENTATION */}
 
