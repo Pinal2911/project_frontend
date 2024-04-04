@@ -20,16 +20,16 @@ function Topnav() {
   <div className=" navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active ">
-        <a className="nav-link text-white" href="/">Edit Student</a>
+        <a className="nav-link text-white" href={`/placement/Admin/AdminPage/editStudent`}>Edit Student</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">Edit Company </a>
+        <a className="nav-link text-white" href={`/placement/Admin/AdminPage/editCompany`}>Edit Company </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">List of Companies</a>
+        <a className="nav-link text-white" href={`/placement/Admin/AdminPage/listOfCompanies`}>List of Companies</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">PPO's</a>
+        <a className="nav-link text-white" href={`/placement/Admin/AdminPage/ppoList`}>PPO's</a>
       </li>
       <li className="nav-item">
         <a className="nav-link text-white" href="/placement">Report Generation</a>

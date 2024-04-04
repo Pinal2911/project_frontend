@@ -35,6 +35,14 @@ import RoundDetails from './components/StudentPage/RoundDetails.jsx';
 import UpdateProfile from './components/StudentPage/UpdateProfile.jsx';
 import Notification from './components/StudentPage/Notification.jsx';
 import CurrComp from './components/AdminPage/CurrComp.jsx';
+import UpcomingComp from './components/AdminPage/UpcomingComp.jsx';
+import PlacedStudPut from './components/AdminPage/PlacedStudPut.jsx';
+import UnplacedPost from './components/AdminPage/UnplacedPost.jsx';
+import AdminUpdate from './components/AdminPage/AdminUpdate.jsx';
+import UpdateCompany from './components/AdminPage/UpdateCompany.jsx';
+import ListComp from './components/AdminPage/ListComp.jsx';
+import PPO from './components/AdminPage/PPO.jsx';
+
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -83,6 +91,17 @@ const router= createBrowserRouter(
 
 
         <Route path='/placement/Admin/AdminPage/CurrentCompany' element={<CurrComp/>}></Route>
+        <Route path='/placement/Admin/AdminPage/UpcomingCompany' element={<UpcomingComp/>}></Route>
+
+        <Route path='/placement/Admin/AdminPage/addPlacedStud' element={<PlacedStudPut/>}></Route>
+        <Route path='/placement/Admin/AdminPage/addUnPlacedStud' element={<UnplacedPost/>}></Route>
+        <Route path='/placement/Admin/AdminPage/editStudent' element={<UpdateProfile/>}></Route>
+        <Route path='/placement/Admin/AdminPage/editAdmin' element={<AdminUpdate/>}></Route>
+        <Route path='/placement/Admin/AdminPage/editCompany' element={<UpdateCompany/>}></Route>
+        <Route path='/placement/Admin/AdminPage/listOfCompanies' element={<ListComp/>}></Route>
+        <Route path='/placement/Admin/AdminPage/ppoList' element={<PPO/>}></Route>
+        
+        
     </Route>
   )
 )

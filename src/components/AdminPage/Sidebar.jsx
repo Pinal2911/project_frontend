@@ -26,21 +26,21 @@ export default function App() {
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white' active aria-current='true'>
+              <MDBListGroupItem tag='a' href={`/placement/Admin/AdminPage/UpcomingCompany`} action className='border-0 border-bottom rounded bg-info text-white' active aria-current='true'>
                 <MDBIcon fas icon="university me-3" />
               Upcoming Companies
               </MDBListGroupItem>
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Admin/AdminPage/addPlacedStud`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="info me-3" />
                Placed Students
               </MDBListGroupItem>
             </MDBRipple>
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Admin/AdminPage/addUnPlacedStud`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="door-open me-3" />
               Unplaced Students
               </MDBListGroupItem>
@@ -65,7 +65,7 @@ export default function App() {
          
 
             <MDBRipple rippleTag='span'>
-              <MDBListGroupItem tag='a' href='#' action className='border-0 border-bottom rounded bg-info text-white'>
+              <MDBListGroupItem tag='a' href={`/placement/Admin/AdminPage/editAdmin`} action className='border-0 border-bottom rounded bg-info text-white'>
                 <MDBIcon fas icon="user-edit me-3" />
                 Update Profile
               </MDBListGroupItem>
