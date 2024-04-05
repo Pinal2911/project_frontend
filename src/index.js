@@ -42,6 +42,9 @@ import AdminUpdate from './components/AdminPage/AdminUpdate.jsx';
 import UpdateCompany from './components/AdminPage/UpdateCompany.jsx';
 import ListComp from './components/AdminPage/ListComp.jsx';
 import PPO from './components/AdminPage/PPO.jsx';
+import Updateprocess from './components/CompanyPage/UpdateProcess.jsx';
+import Updatenotification from './components/CompanyPage/UpdateNotification.jsx';
+
 
 const router= createBrowserRouter(
   
@@ -100,7 +103,12 @@ const router= createBrowserRouter(
         <Route path='/placement/Admin/AdminPage/editCompany' element={<UpdateCompany/>}></Route>
         <Route path='/placement/Admin/AdminPage/listOfCompanies' element={<ListComp/>}></Route>
         <Route path='/placement/Admin/AdminPage/ppoList' element={<PPO/>}></Route>
-        
+
+
+
+        <Route path='/placement/Company/CompanyPage/updateProfile' element={<UpdateCompany/>}></Route>
+        <Route path='/placement/Company/CompanyPage/updateProcess' element={<Updateprocess/>}></Route>
+        <Route path='/placement/Company/CompanyPage/updateNotification' element={<Updatenotification/>}></Route>
         
     </Route>
   )

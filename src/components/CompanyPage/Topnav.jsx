@@ -23,9 +23,6 @@ function Topnav() {
         <a className="nav-link text-white" href="/">Home</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">Notifications</a>
-      </li>
-      <li className="nav-item">
         <a className="nav-link text-white" href="/placement">List of Students</a>
       </li>
       <li className="nav-item">
