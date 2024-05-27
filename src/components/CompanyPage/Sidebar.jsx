@@ -70,7 +70,7 @@ const Sidebar12 = () => {
               <Nav.Item eventKey="3-2"  href={`/placement/Company/CompanyPage/updateNotification`}>Update Notification</Nav.Item>
               <Nav.Item eventKey="3-3" href={`/placement/Company/CompanyPage/updateProfile`} >Update Profile</Nav.Item>
             
-              <Nav.Item eventKey="4-1" href={`/placement/Student/CompanyPage/stats`}>Statistics</Nav.Item> 
+              <Nav.Item eventKey="4-1" href={`/placement/Company/CompanyPage/stats`}>Statistics</Nav.Item> 
             
             
               <Nav.Item eventKey="4-3" href=''></Nav.Item>

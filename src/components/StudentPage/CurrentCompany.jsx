@@ -6,7 +6,7 @@ import axios from 'axios';
 import {Navbar,Container,Nav,Sidenav,Sidebar, Content} from 'rsuite';
 import { Table, Pagination } from 'rsuite';
 
-
+import Footer from '../Footer/Footer';
 const { Column, HeaderCell, Cell } = Table;
 
 
@@ -101,11 +101,11 @@ const fetchData=async()=>{
         {/* <GridWrapper> */}
         <Content>
           
-           <h2>CURRENT COMPANIES</h2>
+           <h2>Current Companies</h2>
            
         
 <div>
-      <Table height={420} data={data2}>
+      <Table height={500} data={data2}>
         <Column width={50} align="center" flexGrow={2}>
           <HeaderCell>Id</HeaderCell>
           <Cell dataKey="id" />
@@ -123,7 +123,7 @@ const fetchData=async()=>{
 
        
       </Table>
-      <div style={{ padding: 20 }}>
+      <div style={{ padding: 25 }}>
         <Pagination
           prev
           next
@@ -147,7 +147,7 @@ const fetchData=async()=>{
 </Container>
 
 </Container>
-
+<Footer></Footer>
 
 </div>
 {/* </GridWrapper> */}

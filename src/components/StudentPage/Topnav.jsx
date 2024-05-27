@@ -11,7 +11,7 @@ const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
       <Navbar.Header>
             <img src={pictlogo} alt="Logo" className="logo" />          
         </Navbar.Header>
-      <Navbar.Brand href="#" >Company Login</Navbar.Brand>
+      <Navbar.Brand href="#" >Student Login</Navbar.Brand>
       <Nav onSelect={onSelect} activeKey={activeKey}>
         <Nav.Item eventKey="1" href={`/placement/`}>Apply to Company</Nav.Item>
         <Nav.Item eventKey="2" href={`/placement/Student/StudentPage/notifications`}>Notifications</Nav.Item>
