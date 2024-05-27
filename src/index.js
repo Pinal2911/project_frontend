@@ -44,7 +44,9 @@ import ListComp from './components/AdminPage/ListComp.jsx';
 import PPO from './components/AdminPage/PPO.jsx';
 import Updateprocess from './components/CompanyPage/UpdateProcess.jsx';
 import Updatenotification from './components/CompanyPage/UpdateNotification.jsx';
-
+import Stats from './components/AdminPage/Stats.jsx';
+import StatsC from './components/CompanyPage/Stats.jsx';
+import StatsS from './components/StudentPage/Stats.jsx';
 
 const router= createBrowserRouter(
   
@@ -91,11 +93,11 @@ const router= createBrowserRouter(
         <Route path='/placement/Student/StudentPage/getRoundDetails' element={<RoundDetails/>}></Route>
         <Route path='/placement/Student/StudentPage/updateProfile' element={<UpdateProfile/>}></Route>
         <Route path='/placement/Student/StudentPage/notifications' element={<Notification/>}></Route>
-
+        <Route path='/placement/Student/StudentPage/stats' element={<StatsS/>}></Route>
 
         <Route path='/placement/Admin/AdminPage/CurrentCompany' element={<CurrComp/>}></Route>
         <Route path='/placement/Admin/AdminPage/UpcomingCompany' element={<UpcomingComp/>}></Route>
-
+        <Route path='/placement/Admin/AdminPage/Stats' element={<Stats/>}></Route>
         <Route path='/placement/Admin/AdminPage/addPlacedStud' element={<PlacedStudPut/>}></Route>
         <Route path='/placement/Admin/AdminPage/addUnPlacedStud' element={<UnplacedPost/>}></Route>
         <Route path='/placement/Admin/AdminPage/editStudent' element={<UpdateProfile/>}></Route>
@@ -104,11 +106,12 @@ const router= createBrowserRouter(
         <Route path='/placement/Admin/AdminPage/listOfCompanies' element={<ListComp/>}></Route>
         <Route path='/placement/Admin/AdminPage/ppoList' element={<PPO/>}></Route>
 
-
+        
 
         <Route path='/placement/Company/CompanyPage/updateProfile' element={<UpdateCompany/>}></Route>
         <Route path='/placement/Company/CompanyPage/updateProcess' element={<Updateprocess/>}></Route>
         <Route path='/placement/Company/CompanyPage/updateNotification' element={<Updatenotification/>}></Route>
+        <Route path='/placement/Company/CompanyPage/stats' element={<StatsC/>}></Route>
         
     </Route>
   )

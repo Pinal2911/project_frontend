@@ -1,20 +1,20 @@
 import React, { useDebugValue, useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Topnav from './Topnav'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 import axios from 'axios';
 
 
 function PPO() {
 
-  const GridWrapper = styled.div`
-  display: grid;
-  grid-gap: 40px;
-  margin-top: em;
-  margin-left: 15em;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(25px, auto);
-  `;
+  // const GridWrapper = styled.div`
+  // display: grid;
+  // grid-gap: 40px;
+  // margin-top: em;
+  // margin-left: 15em;
+  // grid-template-columns: repeat(12, 1fr);
+  // grid-auto-rows: minmax(25px, auto);
+  // `;
 
 
   const[data,setData]=useState([]);
@@ -39,7 +39,7 @@ const fetchData=async()=>{
         
         <Sidebar/>
         <Topnav/>
-        <GridWrapper>
+        {/* <GridWrapper> */}
           <div>
            <pre><h2>CURRENT COMPANIES</h2></pre>
            
@@ -66,7 +66,7 @@ const fetchData=async()=>{
   </tbody>
 </table>
 </div>
-</GridWrapper>
+{/* </GridWrapper> */}
 </div>
   )
 }

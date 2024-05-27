@@ -229,7 +229,7 @@ function StudentRegister() {
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option6"  checked={division=== 'option6'} onChange={(e)=> setDivision(e.target.value)} />
   <label class="form-check-label" for="inlineRadio6">6 </label>
 </div>
-</div>
+
 <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option7"  checked={division=== 'option7'} onChange={(e)=> setDivision(e.target.value)}/>
@@ -250,6 +250,7 @@ function StudentRegister() {
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option11"  checked={division=== 'option11'} onChange={(e)=> setDivision(e.target.value)}/>
   <label class="form-check-label" for="inlineRadio3">11 </label>
+</div>
 </div>
 </div>
 
@@ -469,12 +470,12 @@ function StudentRegister() {
         <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Citizenship : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indian" value="option1" checked={Citizenship==='option1'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indian" value="indian" checked={Citizenship==='indian'} onChange={(e)=>setCitizenship(e.target.value)}/>
         <label class="form-check-label" for="indian">Indian</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="option2" checked={Citizenship==='option2'} onChange={(e)=>setCitizenship(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="other" value="other" checked={Citizenship==='other'} onChange={(e)=>setCitizenship(e.target.value)}/>
         <label class="form-check-label" for="other">Other </label>
       </div>
         
@@ -484,17 +485,17 @@ function StudentRegister() {
     <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">Higher Education : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_yes" value="option1"  checked={higherEducation==='option1'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_yes" value="ed_yes"  checked={higherEducation==='ed_yes'} onChange={(e)=>setHigherEd(e.target.value)}/>
         <label class="form-check-label" for="ed_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_no" value="option2" checked={higherEducation==='option2'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_no" value="ed_no" checked={higherEducation==='ed_no'} onChange={(e)=>setHigherEd(e.target.value)}/>
         <label class="form-check-label" for="ed_no">No</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_maybe" value="option3" checked={higherEducation==='option3'} onChange={(e)=>setHigherEd(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ed_maybe" value="ed_maybe" checked={higherEducation==='ed_maybe'} onChange={(e)=>setHigherEd(e.target.value)}/>
         <label class="form-check-label" for="ed_maybe">Maybe</label>
       </div>
     </div>
@@ -503,12 +504,12 @@ function StudentRegister() {
     <div className="form-outline mb-4 d-flex justify-content-start align-items-start ">
         <label className="form-label" for="">AMCAT EXAM : </label>
           <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_yes" value="option1" checked={amcat==='option1'} onChange={(e)=>setAmcat(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_yes" value="true" checked={amcat==='true'} onChange={(e)=>setAmcat(e.target.value)}/>
         <label class="form-check-label" for="amcat_yes">Yes</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_no" value="option2" checked={amcat==='option2'} onChange={(e)=>setAmcat(e.target.value)}/>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amcat_no" value="false" checked={amcat==='false'} onChange={(e)=>setAmcat(e.target.value)}/>
         <label class="form-check-label" for="amcat_no">No</label>
       </div>
 {/* NOTE YOU HAVE TO ADD UPLOAD DOCUMENTS PART FROM EMAIL */}

@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* App.css */
+.logo {
+  height: 50px; /* Adjust as needed for smaller size */
+  width: 50px; /* Adjust as needed for smaller size */
+  border-radius: 50%; /* Makes the image rounded */
+  margin-right: 20px; /* Adjust as needed for spacing */
+  object-fit: cover; /* Ensures the image fits well within the rounded shape */
+}
+
+.rounded-navbar {
+  border-radius: 5px; /* Adjust as needed for rounded corners */
+  overflow: hidden; /* Ensure child elements don't overflow the rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
+}
+
+/* App.css */
+.rounded-sidebar {
+  border-radius: 15px; /* Adjust as needed for rounded corners */
+  overflow: hidden; /* Ensure child elements don't overflow the rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
+  padding: 10px; /* Optional: Add padding for better layout */
+}

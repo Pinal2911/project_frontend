@@ -1,43 +1,42 @@
-import React from 'react'
+import { Navbar, Nav } from 'rsuite';
+import HomeIcon from '@rsuite/icons/legacy/Home';
+import CogIcon from '@rsuite/icons/legacy/Cog';
+import React from 'react';
 import pictlogo from '../../pictlogo.jfif'
-function Topnav() {
+import '../../App.css';
+
+const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
+  return (
+    <Navbar {...props} className="rounded-navbar">
+      <Navbar.Header>
+            <img src={pictlogo} alt="Logo" className="logo" />          
+        </Navbar.Header>
+      <Navbar.Brand href="#" >Company Login</Navbar.Brand>
+      <Nav onSelect={onSelect} activeKey={activeKey}>
+        <Nav.Item eventKey="1" href={`/placement/`}>Home</Nav.Item>
+        <Nav.Item eventKey="2" href={`/placement/`}>List of Students</Nav.Item>
+        <Nav.Item eventKey="3" href={`/placement/`}>PPOs</Nav.Item>
+      
+          <Nav.Item eventKey="4" href={`/placement/`}>Round Details</Nav.Item>
+        
+       
+       
+      </Nav>
+      
+    </Navbar>
+  );
+};
+
+const Sidebar = () => {
+  const [activeKey, setActiveKey] = React.useState(null);
+
   return (
     <>
-    
-      <nav className=" navbar navbar-expand-lg navbar-dark bg-info right-menu toggle ">
-      <a className="navbar-brand mt-2 mt-lg-0" href="/">
-      <img
-        src={pictlogo}
-        height="30"
-        width="60"
-        alt="MDB Logo"
-        loading="lazy"
-        className='rounded-7'
-      />
-    </a>
-  
-
-  <div className=" navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item active ">
-        <a className="nav-link text-white" href="/">Home</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">List of Students</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">PPO's</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link text-white" href="/placement">Round Details</a>
-      </li> 
-    </ul>
-    
-  </div>
-</nav>
-      
+     
+      <CustomNavbar appearance="inverse" activeKey={activeKey} onSelect={setActiveKey} />
+     
     </>
-  )
-}
+  );
+};
 
-export default Topnav
+export default Sidebar

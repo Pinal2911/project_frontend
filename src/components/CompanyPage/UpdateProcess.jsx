@@ -31,7 +31,7 @@ function Updateprocess() {
     <div className="card shadow-2-strong" style={{borderRadius: '1rem'}}>
       <div className="card-body p-5 text-center">
     {/* BASIC CURRENT DATA STRATS FROM HERE */}
-        <h1 className="display-5 mb-5">ADD NEW COMPANY TO CURRENT COMPANY</h1>
+        <h1 className="display-5 mb-5">UPDATE PROCESS</h1>
 
         <div className="form-outline mb-4">
           <input type="number" name="id" value={process.id} onChange={handleInputChange} id="id" className="form-control form-control-lg" />

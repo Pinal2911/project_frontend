@@ -13,7 +13,8 @@ function PlacedStudPut() {
         pictNumber:'',
         companyName:'',
         pkgAmt:'',
-        ppo:''
+        ppo:'',
+        gender:''
     })
 
     const handleInputChange = (event) => {
@@ -60,6 +61,11 @@ function PlacedStudPut() {
         <div className="form-outline mb-4">
           <input type="number" name="number" value={student.number} onChange={handleInputChange} id="id" className="form-control form-control-lg" />
           <label className="form-label" for="Id">Number</label>
+        </div>
+
+        <div className="form-outline mb-4">
+          <input type="text" name="gender" value={student.gender} onChange={handleInputChange} id="id" className="form-control form-control-lg" />
+          <label className="form-label" for="Id">Last Name</label>
         </div>
 
         <div className="form-outline mb-4">

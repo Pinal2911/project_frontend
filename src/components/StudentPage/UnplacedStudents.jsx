@@ -3,18 +3,18 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Sidebar from './Sidebar'
 import Topnav from './Topnav'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 import axios from 'axios';
 function UnplacedStudents() {
 
-    const GridWrapper = styled.div`
-    display: grid;
-    grid-gap: 40px;
-    margin-top: em;
-    margin-left: 15em;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(25px, auto);
-    `;
+    // const GridWrapper = styled.div`
+    // display: grid;
+    // grid-gap: 40px;
+    // margin-top: em;
+    // margin-left: 15em;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-auto-rows: minmax(25px, auto);
+    // `;
   
     
     const[data,setData]=useState([]);
@@ -40,7 +40,7 @@ function UnplacedStudents() {
     <div>
           <Sidebar/>
         <Topnav/>
-        <GridWrapper>
+        {/* <GridWrapper> */}
           <div>
            <pre><h2>UPCOMING COMPANIES</h2></pre>
            
@@ -78,7 +78,7 @@ function UnplacedStudents() {
   </tbody>
 </table>
 </div>
-</GridWrapper>
+{/* </GridWrapper> */}
 </div>
   )
 }

@@ -44,6 +44,8 @@ function CurrComp() {
           <label className="form-label" for="Id">Package Amount</label>
         </div>
 
+      
+
 
 
         <button onClick={handleSubmit} className="btn btn-primary btn-lg btn-block" type="submit">ADD</button>
