@@ -18,7 +18,8 @@ const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
         <Nav.Item eventKey="3" href={`/placement/Admin/AdminPage/listOfCompanies`}>List of Companies</Nav.Item>
       
           <Nav.Item eventKey="4" href={`/placement/Admin/AdminPage/ppoList`}>PPO</Nav.Item>
-          <Nav.Item eventKey="5" href="/placement">Report</Nav.Item>
+
+          <Nav.Item eventKey="5" href={`/placement/Admin`}>Logout</Nav.Item>
        
        
       </Nav>

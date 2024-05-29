@@ -10,7 +10,7 @@ import Internship from './components/Internship/Internship.jsx'
 import Placement from './components/Placement/Placement.jsx'
 import Student from './components/Student/Student.jsx'
 import Admin from './components/Admin/Admin.jsx'
-
+import Logout from './components/AdminPage/Logout.jsx';
 import Company from './components/Company/Company.jsx'
 import Register from './components/Register/Register.jsx'
 import StudentPage from './components/StudentPage/StudentPage.jsx'
@@ -104,7 +104,11 @@ const router= createBrowserRouter(
         <Route path='/placement/Admin/AdminPage/editCompany' element={<UpdateCompany/>}></Route>
         <Route path='/placement/Admin/AdminPage/listOfCompanies' element={<ListComp/>}></Route>
         <Route path='/placement/Admin/AdminPage/ppoList' element={<PPO/>}></Route>
+        <Route path='/placement/Admin/AdminPage/logout' element={<Logout></Logout>}></Route>
 
+        <Route path='/placement/Company/CompanyPage/logout' element={<Logout></Logout>}></Route>
+
+        <Route path='/placement/Student/StudentPage/logout' element={<Logout></Logout>}></Route>
         
 
         <Route path='/placement/Company/CompanyPage/updateProfile' element={<UpdateCompany/>}></Route>
