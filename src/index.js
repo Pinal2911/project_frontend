@@ -46,7 +46,7 @@ import Updateprocess from './components/CompanyPage/UpdateProcess.jsx';
 import Updatenotification from './components/CompanyPage/UpdateNotification.jsx';
 import Stats from './components/AdminPage/Stats.jsx';
 
-
+import ApplyToComp from './components/StudentPage/ApplyToComp.jsx';
 const router= createBrowserRouter(
   
   createRoutesFromElements(
@@ -109,7 +109,7 @@ const router= createBrowserRouter(
         <Route path='/placement/Company/CompanyPage/logout' element={<Logout></Logout>}></Route>
 
         <Route path='/placement/Student/StudentPage/logout' element={<Logout></Logout>}></Route>
-        
+        <Route path='/placement/Student/StudentPage/applyToCompany' element={<ApplyToComp></ApplyToComp>}></Route>
 
         <Route path='/placement/Company/CompanyPage/updateProfile' element={<UpdateCompany/>}></Route>
         <Route path='/placement/Company/CompanyPage/updateProcess' element={<Updateprocess/>}></Route>

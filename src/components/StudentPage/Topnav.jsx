@@ -13,9 +13,9 @@ const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
         </Navbar.Header>
       <Navbar.Brand href="#" >Student Login</Navbar.Brand>
       <Nav onSelect={onSelect} activeKey={activeKey}>
-        <Nav.Item eventKey="1" href={`/placement/`}>Apply to Company</Nav.Item>
+        <Nav.Item eventKey="1" href={`/placement/Student/StudentPage/applyToCompany`}>Apply to Company</Nav.Item>
         <Nav.Item eventKey="2" href={`/placement/Student/StudentPage/notifications`}>Notifications</Nav.Item>
-        <Nav.Item eventKey="3" href={`/placement/`}>Applications</Nav.Item>
+        <Nav.Item eventKey="3" href={`/placement/Student/StudentPage/applyToCompany`}>Applications</Nav.Item>
       
           <Nav.Item eventKey="4" href={`/placement/`}>Profile</Nav.Item>
           <Nav.Item eventKey="5" href={`/placement/Student`}>Logout</Nav.Item>
