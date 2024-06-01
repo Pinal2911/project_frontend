@@ -5,7 +5,7 @@ import Topnav from './Topnav'
 import axios from 'axios';
 import {Navbar,Container,Nav,Sidenav,Sidebar, Content} from 'rsuite';
 import { Table, Pagination } from 'rsuite';
-
+import {toaster,Message} from 'rsuite'
 import Footer from '../Footer/Footer';
 const { Column, HeaderCell, Cell } = Table;
 
@@ -47,6 +47,7 @@ const fetchData=async()=>{
     const response=await axios.get('http://localhost:8080/api/student/placement/getCurrentCompany');
     console.log(response.data);
     setData(response.data);
+   
   }catch(error){
     console.log('error fetching data',error);
   }

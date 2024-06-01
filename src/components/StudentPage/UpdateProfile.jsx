@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker'
 import { useState } from 'react'
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
-
+import {Message,toaster} from 'rsuite'
 const UpProfile =()=> {
 
 
@@ -66,6 +66,12 @@ const UpProfile =()=> {
   try{
     const response=await axios.put(`http://localhost:8080/api/student/placement/editStudentProfile/${student.id}`,student)
     console.log(response)
+    toaster.push(
+      <Message showIcon type="success" duration={5000}>
+        Applied!
+      </Message>
+      
+    );
   }catch(error){
     console.log(error)
   }

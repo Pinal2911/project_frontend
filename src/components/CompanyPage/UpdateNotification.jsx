@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {toaster,Message} from 'rsuite'
 function Updatenotification() {
 
     const [notification,setnotification]=useState({
@@ -18,6 +19,12 @@ function Updatenotification() {
         try{
           const response=await axios.put(`http://localhost:8080/api/company/placement/editNotification/${notification.id}`,notification)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

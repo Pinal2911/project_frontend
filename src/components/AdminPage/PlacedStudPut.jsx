@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {Message,toaster} from 'rsuite'
 function PlacedStudPut() {
 
     const [student,setStudent]=useState({
@@ -27,6 +28,12 @@ function PlacedStudPut() {
         try{
           const response=await axios.post(`http://localhost:8080/api/admin/placement/addPlacedStud`,student)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

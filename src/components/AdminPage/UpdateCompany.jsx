@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
+import {toaster,Message} from 'rsuite'
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
 const UpdateCompany =()=> {
 
@@ -25,6 +26,12 @@ const UpdateCompany =()=> {
         try{
           const response=await axios.put(`http://localhost:8080/api/admin/placement/editCompany/${company.id}`,company)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

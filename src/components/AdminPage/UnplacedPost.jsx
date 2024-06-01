@@ -25,6 +25,12 @@ function UnplacedPost() {
         try{
           const response=await axios.post(`http://localhost:8080/api/admin/placement/unPlacedStud`,student)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

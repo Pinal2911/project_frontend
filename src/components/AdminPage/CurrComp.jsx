@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { Table, Pagination,Button,Message ,toaster} from 'rsuite';
 function CurrComp() {
 
     const [company,setCompany]=useState({
@@ -18,6 +19,12 @@ function CurrComp() {
         try{
           const response=await axios.post(`http://localhost:8080/api/admin/placement/currentComp`,company)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

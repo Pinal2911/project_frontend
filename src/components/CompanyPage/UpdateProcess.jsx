@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {Message,toaster} from 'rsuite'
 function Updateprocess() {
 
     const [process,setprocess]=useState({
@@ -18,6 +19,12 @@ function Updateprocess() {
         try{
           const response=await axios.put(`http://localhost:8080/api/company/placement/editProcess/${process.id}`,process)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }

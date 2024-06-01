@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import Topnav from './Topnav'
 //import styled from 'styled-components'
 import axios from 'axios';
-
+import { Table, Pagination,Button,Message ,toaster} from 'rsuite';
 
 function ListComp() {
 

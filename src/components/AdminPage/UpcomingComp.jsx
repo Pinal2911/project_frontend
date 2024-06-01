@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {toaster,Message} from 'rsuite'
 function UpcomingComp() {
 
     const [company,setCompany]=useState({
@@ -19,9 +20,16 @@ function UpcomingComp() {
         try{
           const response=await axios.post(`http://localhost:8080/api/admin/placement/upcomingComp`,company)
           console.log(response)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
         }catch(error){
           console.log(error)
         }
+
        };
 
   return (

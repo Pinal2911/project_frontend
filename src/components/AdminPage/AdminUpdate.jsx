@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
+import { Table, Pagination,Button,Message ,toaster} from 'rsuite';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
 const AdminUpdate =()=> {
 
@@ -10,7 +11,7 @@ const AdminUpdate =()=> {
         password:'',
         name:''
     });
-
+    
 
     const handleInputChange=(event)=>{
         const { name, value } = event.target;
@@ -22,6 +23,12 @@ const AdminUpdate =()=> {
         event.preventDefault();
         try{
           const response=await axios.put(`http://localhost:8080/api/admin/placement/editAdmin/${admin.id}`,admin)
+          toaster.push(
+            <Message showIcon type="success" duration={5000}>
+              Applied!
+            </Message>
+            
+          );
           console.log(response)
         }catch(error){
           console.log(error)
