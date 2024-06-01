@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import {toaster,Message} from 'rsuite'
 function UnplacedPost() {
 
     const [student,setStudent]=useState({

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { Table, Pagination,Button,Message ,toaster} from 'rsuite';
+import {toaster,Message} from 'rsuite'
 function CurrComp() {
 
     const [company,setCompany]=useState({
